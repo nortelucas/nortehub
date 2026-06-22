@@ -8,7 +8,10 @@ import {
   Save,
   ArrowLeft,
   GripVertical,
-  Link
+  Link,
+  Lock,
+  Eye,
+  EyeOff
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -48,6 +51,24 @@ const AVAILABLE_COLORS = [
 ];
 
 export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    return sessionStorage.getItem("nortehub_config_auth") === "true";
+  });
+  const [passwordInput, setPasswordInput] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
+
+  const handleAuthSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (passwordInput === "Norte@321") {
+      setIsAuthenticated(true);
+      sessionStorage.setItem("nortehub_config_auth", "true");
+      setAuthError(null);
+    } else {
+      setAuthError("Senha incorreta. Tente novamente.");
+    }
+  };
+
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editForm, setEditForm] = useState<Partial<HubLinkData>>({});
   const [draggedId, setDraggedId] = useState<string | null>(null);
@@ -127,6 +148,92 @@ export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
       link.id === id ? { ...link, isActive: active } : link
     ));
   };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-center items-center overflow-x-hidden relative font-sans p-4">
+        {/* Decorative Glowing Orbs */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-orange-500/10 blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-orange-600/5 blur-[150px] pointer-events-none" />
+
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, type: "spring", stiffness: 100, damping: 15 }}
+          className="w-full max-w-md bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-2xl relative z-10"
+        >
+          <div className="flex flex-col items-center text-center space-y-4 mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20 shadow-inner">
+              <Lock className="w-6 h-6" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-white">Área Restrita</h2>
+              <p className="text-slate-400 text-xs md:text-sm mt-1">
+                Insira a senha de administrador para acessar as configurações do portal.
+              </p>
+            </div>
+          </div>
+
+          <form onSubmit={handleAuthSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <Label htmlFor="password-gate" className="text-slate-300 text-xs font-semibold">Senha</Label>
+              </div>
+              <div className="relative">
+                <Input
+                  id="password-gate"
+                  type={showPassword ? "text" : "password"}
+                  value={passwordInput}
+                  onChange={(e) => {
+                    setPasswordInput(e.target.value);
+                    setAuthError(null);
+                  }}
+                  className="bg-slate-950/80 border-slate-800 text-white placeholder-slate-600 focus-visible:ring-primary focus-visible:border-primary pr-10 rounded-xl animate-none"
+                  placeholder="••••••••"
+                  autoFocus
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-350 transition-colors focus:outline-none"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            {authError && (
+              <motion.div
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="rounded-xl border border-red-500/20 bg-red-500/10 px-3.5 py-2.5 text-xs text-red-400 font-medium"
+              >
+                {authError}
+              </motion.div>
+            )}
+
+            <div className="flex flex-col gap-2 pt-2">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/95 text-white font-bold h-11 rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 cursor-pointer text-sm">
+                Confirmar
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                onClick={() => navigateTo('hub')}
+                className="w-full text-slate-400 hover:text-white hover:bg-slate-800 h-11 rounded-xl transition-all flex items-center justify-center gap-2 text-sm"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Voltar ao Menu
+              </Button>
+            </div>
+          </form>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8">
