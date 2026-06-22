@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, Reorder } from "motion/react";
+import { motion } from "motion/react";
 import {
   Settings,
   Plus,
@@ -50,6 +50,33 @@ const AVAILABLE_COLORS = [
 export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editForm, setEditForm] = useState<Partial<HubLinkData>>({});
+  const [draggedId, setDraggedId] = useState<string | null>(null);
+
+  const handleDragStart = (e: React.DragEvent, id: string) => {
+    setDraggedId(id);
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/plain", id);
+  };
+
+  const handleDragOver = (e: React.DragEvent, index: number) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+    if (!draggedId) return;
+    
+    const draggedIndex = hubLinks.findIndex(l => l.id === draggedId);
+    if (draggedIndex === index) return;
+
+    setHubLinks(prev => {
+      const newLinks = [...prev];
+      const [draggedItem] = newLinks.splice(draggedIndex, 1);
+      newLinks.splice(index, 0, draggedItem);
+      return newLinks;
+    });
+  };
+
+  const handleDragEnd = () => {
+    setDraggedId(null);
+  };
 
   const handleEdit = (link: HubLinkData) => {
     setEditingId(link.id);
@@ -124,23 +151,18 @@ export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
         </div>
 
         {/* Links List */}
-        <Reorder.Group 
-          axis="y" 
-          values={hubLinks.map(l => l.id)} 
-          onReorder={(newIds) => {
-            const reordered = newIds.map(id => hubLinks.find(l => l.id === id)).filter(Boolean) as HubLinkData[];
-            setHubLinks(reordered);
-          }} 
-          className="space-y-4"
-        >
+        <div className="space-y-4">
           {hubLinks.map((link, index) => (
-            <Reorder.Item 
+            <motion.div 
               key={link.id} 
-              value={link.id}
+              draggable={editingId !== link.id}
+              onDragStart={(e: React.DragEvent) => handleDragStart(e, link.id)}
+              onDragOver={(e: React.DragEvent) => handleDragOver(e, index)}
+              onDragEnd={handleDragEnd}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
-              className="relative"
+              className={`relative ${draggedId === link.id ? 'opacity-50 scale-[0.98]' : ''}`}
             >
               <Card className={`overflow-hidden transition-all border-slate-200 ${editingId === link.id ? 'ring-2 ring-primary/50 shadow-md' : 'hover:shadow-md hover:border-slate-300'}`}>
                 {editingId === link.id ? (
@@ -225,7 +247,7 @@ export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
                   </CardContent>
                 ) : (
                   <CardContent className="p-4 flex flex-col md:flex-row items-center gap-4 bg-white group">
-                    <div className="cursor-move text-slate-300 hover:text-slate-500">
+                    <div className="cursor-grab active:cursor-grabbing text-slate-300 hover:text-slate-500">
                       <GripVertical className="w-5 h-5" />
                     </div>
                     
@@ -265,7 +287,7 @@ export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
                   </CardContent>
                 )}
               </Card>
-            </Reorder.Item>
+            </motion.div>
           ))}
 
           {hubLinks.length === 0 && (
@@ -277,7 +299,7 @@ export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
               </Button>
             </div>
           )}
-        </Reorder.Group>
+        </div>
       </div>
     </div>
   );
