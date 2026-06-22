@@ -124,11 +124,19 @@ export function Config({ hubLinks, setHubLinks, navigateTo }: ConfigProps) {
         </div>
 
         {/* Links List */}
-        <Reorder.Group axis="y" values={hubLinks} onReorder={setHubLinks} className="space-y-4">
+        <Reorder.Group 
+          axis="y" 
+          values={hubLinks.map(l => l.id)} 
+          onReorder={(newIds) => {
+            const reordered = newIds.map(id => hubLinks.find(l => l.id === id)).filter(Boolean) as HubLinkData[];
+            setHubLinks(reordered);
+          }} 
+          className="space-y-4"
+        >
           {hubLinks.map((link, index) => (
             <Reorder.Item 
               key={link.id} 
-              value={link}
+              value={link.id}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
