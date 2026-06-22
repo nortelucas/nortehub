@@ -173,6 +173,13 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
                               <ExternalLink className="w-4 h-4" />
                             </Button>
                           </a>
+                        ) : link.url.startsWith('http') ? (
+                          <a href={link.url} target="_self" className="w-full">
+                            <Button className={`w-full ${colors.btnBg} ${colors.btnHover} text-white font-bold h-10 rounded-xl shadow-lg ${colors.btnShadow} transition-all flex items-center justify-center gap-2 cursor-pointer text-sm`}>
+                              Abrir Ferramenta
+                              <ArrowRight className="w-4 h-4" />
+                            </Button>
+                          </a>
                         ) : (
                           <Button 
                             onClick={() => navigateTo(link.url as any)}
