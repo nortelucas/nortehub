@@ -34,7 +34,8 @@ import {
   SlidersHorizontal,
   RefreshCw,
   PlusCircle,
-  Banknote
+  Banknote,
+  ArrowLeft
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -1299,6 +1300,19 @@ export default function App() {
 
   return (
     <>
+      {currentView !== 'hub' && currentView !== 'config' && (
+        <div className="fixed bottom-6 left-6 z-[9999] md:bottom-8 md:left-8">
+          <Button 
+            size="lg"
+            onClick={() => navigateTo('hub')}
+            className="rounded-full shadow-xl bg-slate-900 hover:bg-slate-800 text-white flex items-center gap-3 px-5 md:px-6 h-12 md:h-14 transition-all hover:scale-105 active:scale-95 ring-4 ring-white/50"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span className="font-semibold text-sm md:text-base">Menu Principal</span>
+          </Button>
+        </div>
+      )}
+
       <AnimatePresence>
         {isTextModalOpen && (
           <div
