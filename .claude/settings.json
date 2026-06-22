@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scratch/_dbg_cemone.mjs)",
+      "Bash(node scratch/_dbg_cemone2.mjs)",
+      "Bash(node -e ' *)",
+      "Read(//c/Users/user/**)",
+      "Read(//c/Users/user/.claude/**)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('/c/Users/user/.claude.json'\\)\\); print\\(json.dumps\\(d.get\\('mcpServers',{}\\), indent=2\\)\\); print\\('--- projects mcp ---'\\); [print\\(k, json.dumps\\(v.get\\('mcpServers',{}\\),indent=2\\)\\) for k,v in d.get\\('projects',{}\\).items\\(\\) if v.get\\('mcpServers'\\)]\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('/c/Users/user/.claude.json'\\)\\); print\\('TOP:',json.dumps\\(d.get\\('mcpServers',{}\\),indent=2\\)\\); [print\\('PROJ',k,json.dumps\\(v.get\\('mcpServers',{}\\),indent=2\\)\\) for k,v in d.get\\('projects',{}\\).items\\(\\) if v.get\\('mcpServers'\\)]\")",
+      "PowerShell($d = Get-Content \"$env:USERPROFILE\\\\.claude.json\" -Raw | ConvertFrom-Json; \"=== TOP-LEVEL mcpServers ===\"; $d.mcpServers | ConvertTo-Json -Depth 6; \"=== PROJECT-LEVEL mcpServers ===\"; $d.projects.PSObject.Properties | ForEach-Object { if \\($_.Value.mcpServers\\) { $_.Name; $_.Value.mcpServers | ConvertTo-Json -Depth 6 } })"
+    ]
+  }
+}

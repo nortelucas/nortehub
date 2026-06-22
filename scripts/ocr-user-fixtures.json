@@ -1,0 +1,183 @@
+[
+  {
+    "name": "csv-small-export",
+    "file": "%USERPROFILE%/Downloads/extracao_perfis_1778764528342.csv",
+    "mime": "text/csv",
+    "expect": {
+      "count": 6,
+      "items": [
+        { "produto": "P280", "qtde": 2 },
+        { "produto": "LG043", "qtde": 1 },
+        { "produto": "GS034", "qtde": 1 }
+      ]
+    }
+  },
+  {
+    "name": "csv-large-export",
+    "file": "%USERPROFILE%/Downloads/extracao_perfis_1778759613505.csv",
+    "mime": "text/csv",
+    "expect": {
+      "count": 55,
+      "items": [
+        { "produto": "25548", "qtde": 3 },
+        { "produto": "SU102", "qtde": 66 },
+        { "produto": "VZ051", "qtde": 41 }
+      ]
+    }
+  },
+  {
+    "name": "image-metaperfil-painting",
+    "file": "%USERPROFILE%/Downloads/WhatsApp Image 2026-05-13 at 16.11.09.jpeg",
+    "mime": "image/jpeg",
+    "expect": {
+      "count": 2,
+      "items": [
+        { "produto": "80041", "qtde": 1 },
+        { "produto": "MP347", "qtde": 1 }
+      ]
+    }
+  },
+  {
+    "name": "image-handwritten-dash-list",
+    "file": "%USERPROFILE%/Downloads/WhatsApp Image 2026-05-14 at 09.23.37.jpeg",
+    "mime": "image/jpeg",
+    "expect": {
+      "count": 6,
+      "items": [
+        { "produto": "SU057", "qtde": 2 },
+        { "produto": "MP347", "qtde": 1 },
+        { "produto": "SU010", "qtde": 1 },
+        { "produto": "SU081", "qtde": 2 },
+        { "produto": "US294", "qtde": 8 },
+        { "produto": "VZ051", "qtde": 6 }
+      ]
+    }
+  },
+  {
+    "name": "image-product-variant-table",
+    "file": "%USERPROFILE%/Downloads/WhatsApp Image 2026-05-12 at 16.23.26.jpeg",
+    "mime": "image/jpeg",
+    "expect": {
+      "count": 14,
+      "items": [
+        { "produto": "CT209", "qtde": 2 },
+        { "produto": "MP347", "qtde": 2 },
+        { "produto": "SK001", "qtde": 1 },
+        { "produto": "SK007", "qtde": 1 },
+        { "produto": "SK040", "qtde": 1 },
+        { "produto": "SK049", "qtde": 1 },
+        { "produto": "SK108", "qtde": 2 },
+        { "produto": "SK187", "qtde": 1 },
+        { "produto": "SK225", "qtde": 1 },
+        { "produto": "SK245", "qtde": 1 },
+        { "produto": "SK272", "qtde": 1 },
+        { "produto": "SK302", "qtde": 1 },
+        { "produto": "SU203", "qtde": 1 },
+        { "produto": "US285", "qtde": 14 }
+      ]
+    }
+  },
+  {
+    "name": "image-description-code-table",
+    "file": "%USERPROFILE%/Downloads/WhatsApp Image 2026-05-12 at 14.57.33 (2).jpeg",
+    "mime": "image/jpeg",
+    "expect": {
+      "count": 10,
+      "items": [
+        { "produto": "P273", "qtde": 4 },
+        { "produto": "P270", "qtde": 6 },
+        { "produto": "L519", "qtde": 1 },
+        { "produto": "P264", "qtde": 2 },
+        { "produto": ["50X50", "TUB4020"], "qtde": 1 },
+        { "produto": "L002", "qtde": 4 },
+        { "produto": "MP347", "qtde": 5 },
+        { "produto": "PR001", "qtde": 5 },
+        { "produto": "TUB4501", "qtde": 6 },
+        { "produto": "US285", "qtde": 10 }
+      ]
+    }
+  },
+  {
+    "name": "attached-bw26-bar-calculation",
+    "file": "%USERPROFILE%/Downloads/BW26-23.pdf",
+    "mime": "application/pdf",
+    "expect": {
+      "count": 45,
+      "items": [
+        { "produto": "BG057", "qtde": 14, "comprimento": 6000 },
+        { "produto": "LG601", "qtde": 2, "comprimento": 6000 },
+        { "produto": "CL006", "qtde": 1, "comprimento": 6000 },
+        { "produto": "PL169", "qtde": 6, "comprimento": 6000 }
+      ]
+    }
+  },
+  {
+    "name": "attached-alumafer-bar-list",
+    "file": "%USERPROFILE%/Downloads/ALUMAFER - PERFIS - 0301.pdf",
+    "mime": "application/pdf",
+    "expect": {
+      "count": 60,
+      "items": [
+        { "produto": "20SP006", "qtde": 1, "comprimento": 6000 },
+        { "produto": "BG057", "qtde": 44, "comprimento": 6000 },
+        { "produto": "CL006", "qtde": 1, "comprimento": 3000 },
+        { "produto": "CL006", "qtde": 4, "comprimento": 3000 },
+        { "produto": "CM200", "qtde": 9, "comprimento": 6000 },
+        { "produto": "LG111", "qtde": 18, "comprimento": 6000 },
+        { "produto": "RM018", "qtde": 5, "comprimento": 6000 },
+        { "produto": "SU276", "qtde": 3, "comprimento": 6000 }
+      ]
+    }
+  },
+  {
+    "name": "attached-cecilia-smartcem-bar-summary",
+    "file": "%USERPROFILE%/Downloads/PROJETO CECILIA  JARDINS    2026.pdf",
+    "mime": "application/pdf",
+    "expect": {
+      "count": 55,
+      "items": [
+        { "produto": "DP-PR003", "qtde": 21, "comprimento": 6000 },
+        { "produto": "CL006", "qtde": 4, "comprimento": 3000 },
+        { "produto": "CM060", "qtde": 26, "comprimento": 6000 },
+        { "produto": "RM005", "qtde": 33, "comprimento": 6000 },
+        { "produto": "LG048", "qtde": 12, "comprimento": 6000 },
+        { "produto": "LG070", "qtde": 4, "comprimento": 6000 },
+        { "produto": "LG068", "qtde": 8, "comprimento": 6000 },
+        { "produto": "DP-PR32507", "qtde": 7, "comprimento": 6000 },
+        { "produto": "US285", "qtde": 3, "comprimento": 6000 }
+      ]
+    }
+  },
+  {
+    "name": "attached-frizo-cotacao-obra",
+    "file": "%USERPROFILE%/Downloads/WhatsApp Image 2026-05-22 at 11.48.31.jpeg",
+    "mime": "image/jpeg",
+    "expect": {
+      "count": 41,
+      "items": [
+        { "produto": "LG070", "qtde": 2 },
+        { "produto": "LG059", "qtde": 15 },
+        { "produto": "VZ051CF", "qtde": 17 },
+        { "produto": "VZ051", "qtde": 17 },
+        { "produto": "SU279", "qtde": 2 },
+        { "produto": "MN001", "qtde": 2 },
+        { "produto": "TUB4530", "qtde": 2 },
+        { "produto": "DS238", "qtde": 3 }
+      ]
+    }
+  },
+  {
+    "name": "attached-andrea-luisa-table",
+    "file": "%USERPROFILE%/Downloads/WhatsApp Image 2026-05-21 at 13.39.07.jpeg",
+    "mime": "image/jpeg",
+    "expect": {
+      "count": 14,
+      "items": [
+        { "produto": "LG170", "qtde": 1 },
+        { "produto": "BG057", "qtde": 3 },
+        { "produto": "LG028", "qtde": 1 },
+        { "produto": "MN039", "qtde": 1 }
+      ]
+    }
+  }
+]

@@ -1,0 +1,2480 @@
+[
+  {
+    "row": 3,
+    "itemPedido": "4213",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 4,
+    "itemPedido": "4214",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 5,
+    "itemPedido": "4214",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 6,
+    "itemPedido": "4235",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 7,
+    "itemPedido": "4241",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 8,
+    "itemPedido": "4243",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 9,
+    "itemPedido": "4249",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 10,
+    "itemPedido": "4251",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 11,
+    "itemPedido": "4259",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 12,
+    "itemPedido": "25021",
+    "conversaoAluminorte": "I105",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 13,
+    "itemPedido": "25023",
+    "conversaoAluminorte": "P574",
+    "sugestao": "-",
+    "comentarios": "Cabeça de Touro"
+  },
+  {
+    "row": 14,
+    "itemPedido": "80059",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 15,
+    "itemPedido": "80068",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 16,
+    "itemPedido": "80069D / MG32069D",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "MN031",
+    "comentarios": "80069D é a tampa da integrada da gold, mais estreita"
+  },
+  {
+    "row": 17,
+    "itemPedido": "20SP013",
+    "conversaoAluminorte": "ME013",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 18,
+    "itemPedido": "20SP017",
+    "conversaoAluminorte": "MH017",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 19,
+    "itemPedido": "20SP169",
+    "conversaoAluminorte": "CM169",
+    "sugestao": "-",
+    "comentarios": "FACCE usa esse código"
+  },
+  {
+    "row": 20,
+    "itemPedido": "20SPV01",
+    "conversaoAluminorte": "20SPP01",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 21,
+    "itemPedido": "A022",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 22,
+    "itemPedido": "A057",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "Conversões: A209 ou 30-270"
+  },
+  {
+    "row": 23,
+    "itemPedido": "AK309",
+    "conversaoAluminorte": "TMG1152",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 24,
+    "itemPedido": "AL49",
+    "conversaoAluminorte": "L537B",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 25,
+    "itemPedido": "AL66",
+    "conversaoAluminorte": "U555B",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 26,
+    "itemPedido": "ALP4933",
+    "conversaoAluminorte": "",
+    "sugestao": "",
+    "comentarios": "ALLWAM"
+  },
+  {
+    "row": 27,
+    "itemPedido": "B413",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "D082",
+    "comentarios": "GILSON SUGERIU"
+  },
+  {
+    "row": 28,
+    "itemPedido": "BAR061 / BC061",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "BAR027 (50,8 mm com 3,18) ou BAR100 (50,8 com 6,35mm)",
+    "comentarios": "BC061 (50,8 x 4,76mm)"
+  },
+  {
+    "row": 29,
+    "itemPedido": "BAR096",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "BAR057 (38,1 x 4,76 mm) ou BAR022 (38,1 x 3,18 mm)",
+    "comentarios": "BAR096 - 38,1 x 6,35 mm"
+  },
+  {
+    "row": 30,
+    "itemPedido": "BC005",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "BAR086 (12,7 x 6,35 mm)",
+    "comentarios": "BC005 - 12,70 X 9,53"
+  },
+  {
+    "row": 31,
+    "itemPedido": "BC022",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "BAR015 (22,22 com 3,18 mm)",
+    "comentarios": "BARRA CHATA 7/8 X 3/16"
+  },
+  {
+    "row": 32,
+    "itemPedido": "BC050",
+    "conversaoAluminorte": "BAR022",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 33,
+    "itemPedido": "BC081 / BAR036",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "BARRA CHATA 101,60X3,17"
+  },
+  {
+    "row": 34,
+    "itemPedido": "BG059",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG059 - Baguete da Gold",
+    "comentarios": ""
+  },
+  {
+    "row": 35,
+    "itemPedido": "BOX",
+    "conversaoAluminorte": "U555, U666",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 36,
+    "itemPedido": "Brise - Não Port",
+    "conversaoAluminorte": "D053 e D059",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 37,
+    "itemPedido": "Caixa para Portão basculante",
+    "conversaoAluminorte": "39811-5000",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 38,
+    "itemPedido": "CAVALÃO",
+    "conversaoAluminorte": "U555",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 39,
+    "itemPedido": "CAVALINHO",
+    "conversaoAluminorte": "U555B",
+    "sugestao": "-",
+    "comentarios": "U para vidro de 8mm"
+  },
+  {
+    "row": 40,
+    "itemPedido": "CB273",
+    "conversaoAluminorte": "3211",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 41,
+    "itemPedido": "CB276",
+    "conversaoAluminorte": "3210",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 42,
+    "itemPedido": "CG072",
+    "conversaoAluminorte": "D143",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 43,
+    "itemPedido": "CG078",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "Linha Gradil Da Alcoa"
+  },
+  {
+    "row": 44,
+    "itemPedido": "CG079",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "Linha Gradil Da Alcoa"
+  },
+  {
+    "row": 45,
+    "itemPedido": "CG176",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U1108 - fora de portfólio nosso",
+    "comentarios": "Aludesign - Linha Gradil Da Alcoa"
+  },
+  {
+    "row": 46,
+    "itemPedido": "CG177",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 47,
+    "itemPedido": "CG201",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 48,
+    "itemPedido": "CG202",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "CG072 (D143)",
+    "comentarios": "Guarda corpo da Perfil"
+  },
+  {
+    "row": 49,
+    "itemPedido": "CG204",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "GR002",
+    "comentarios": "Guarda corpo da Perfil"
+  },
+  {
+    "row": 50,
+    "itemPedido": "CL010",
+    "conversaoAluminorte": "BAR4037",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 51,
+    "itemPedido": "CM113",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 52,
+    "itemPedido": "CM200",
+    "conversaoAluminorte": "CM063",
+    "sugestao": "",
+    "comentarios": "CM200 é mais leve que o CM063"
+  },
+  {
+    "row": 53,
+    "itemPedido": "Corrimão chato",
+    "conversaoAluminorte": "D095",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 54,
+    "itemPedido": "Corrimão redondo",
+    "conversaoAluminorte": "D097",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 55,
+    "itemPedido": "CT001",
+    "conversaoAluminorte": "L002",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 56,
+    "itemPedido": "CT005",
+    "conversaoAluminorte": "L405",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 57,
+    "itemPedido": "CT007",
+    "conversaoAluminorte": "L009",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 58,
+    "itemPedido": "CT009",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L009 (19,05 com 1,6 mm de espessura)",
+    "comentarios": "CT009 - 19,05x19,05 com 2,38 mm"
+  },
+  {
+    "row": 59,
+    "itemPedido": "CT012",
+    "conversaoAluminorte": "L012",
+    "sugestao": "L011 (19,05 x 19,05 com 3,18 mm de espessura)",
+    "comentarios": "CT012 --> 7/8 x 7/8 com 3,175 mm"
+  },
+  {
+    "row": 60,
+    "itemPedido": "CT013",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L013 (25,4x25,4 por 1,6mm)",
+    "comentarios": "CT013 --> 25x25 com 1,2 mm"
+  },
+  {
+    "row": 61,
+    "itemPedido": "CT015",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L013 (25,4x25,4 por 1,6mm)",
+    "comentarios": "CT015 --> 25x25 com 1,2 mm"
+  },
+  {
+    "row": 62,
+    "itemPedido": "CT016",
+    "conversaoAluminorte": "L013",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 63,
+    "itemPedido": "CT018",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L014 (25,4 x 3,20 mm)",
+    "comentarios": "CT018 - 25,4 x 25,4 com 2,38 mm de espessura"
+  },
+  {
+    "row": 64,
+    "itemPedido": "CT026",
+    "conversaoAluminorte": "L022",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 65,
+    "itemPedido": "CT027",
+    "conversaoAluminorte": "L023",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 66,
+    "itemPedido": "VT899",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU238",
+    "comentarios": "GILSON"
+  },
+  {
+    "row": 67,
+    "itemPedido": "CT034",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L026 (50,35 com 4,76 mm)",
+    "comentarios": "L027"
+  },
+  {
+    "row": 68,
+    "itemPedido": "CT037",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 69,
+    "itemPedido": "CT044",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L612 (50,8 x 50,8 com 2,0mm de espessura)",
+    "comentarios": "CANTONEIRA DE ABAS IGUAIS - A 76,20 - E 3,17"
+  },
+  {
+    "row": 70,
+    "itemPedido": "CT049",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L744 (38,1 x 1,57 mm)",
+    "comentarios": "CANTONEIRA DE ABAS IGUAIS - A 38,10 - E 2,00"
+  },
+  {
+    "row": 71,
+    "itemPedido": "CT085",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L009 (19,05 com 1,6 mm de espessura)",
+    "comentarios": "CT085 20x20 Esp. 1,3"
+  },
+  {
+    "row": 72,
+    "itemPedido": "CT210",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "CT210 - 35x15 com 1,5mm"
+  },
+  {
+    "row": 73,
+    "itemPedido": "CT218",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L104 (50,8 por 25,4 com 3,2 mm)",
+    "comentarios": "CT218 --> 50 X 31 COM 2,0MM"
+  },
+  {
+    "row": 74,
+    "itemPedido": "CT219",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L104 (50,8 por 25,4 com 3,2 mm)",
+    "comentarios": "CT - 50,80 X B 38,10 - E 3,18"
+  },
+  {
+    "row": 75,
+    "itemPedido": "CT292",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L100 (38,1 x 25,4 com 3,2 mm)",
+    "comentarios": "L434 - 30,00 X 20,00 X 1,60"
+  },
+  {
+    "row": 76,
+    "itemPedido": "CT310",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L104 (50,8 por 25,4 com 3,2 mm)",
+    "comentarios": "L104A - CANTONEIRA DE ABAS DESIGUAIS - A 50,00 X B 25,00 - E 1,50"
+  },
+  {
+    "row": 77,
+    "itemPedido": "CT320",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 78,
+    "itemPedido": "CT325",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 79,
+    "itemPedido": "CX185",
+    "conversaoAluminorte": "GS034",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 80,
+    "itemPedido": "DP095",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "6068 - 25,4 de base x 15,88 de altura - losângulo",
+    "comentarios": ""
+  },
+  {
+    "row": 81,
+    "itemPedido": "DV111",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U496 - medidas parecidas",
+    "comentarios": ""
+  },
+  {
+    "row": 82,
+    "itemPedido": "E560",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "AL068 - Guia Stanley de 48x48 mm",
+    "comentarios": ""
+  },
+  {
+    "row": 83,
+    "itemPedido": "FA202",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA200",
+    "comentarios": ""
+  },
+  {
+    "row": 84,
+    "itemPedido": "FA205",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA204",
+    "comentarios": "FA204 tem olhal e o FA205 não tem"
+  },
+  {
+    "row": 85,
+    "itemPedido": "FA206",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 86,
+    "itemPedido": "FA231A",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FAA207 (Presilha de apoio dos quadros)",
+    "comentarios": "Dividir o número de barras por 50mm (tamanho do acessório)"
+  },
+  {
+    "row": 87,
+    "itemPedido": "FA269",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA273 (arremate ext arredondado) - não é portfólio tb",
+    "comentarios": ""
+  },
+  {
+    "row": 88,
+    "itemPedido": "FA344",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA236",
+    "comentarios": "FA344 é aberto e menor que o FA236"
+  },
+  {
+    "row": 89,
+    "itemPedido": "FA397",
+    "conversaoAluminorte": "SOMENTE ACESSÓRIOS",
+    "sugestao": "FAA208",
+    "comentarios": "Dividir o número de barras por 18mm (tamanho do acessório)"
+  },
+  {
+    "row": 90,
+    "itemPedido": "FC368",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 91,
+    "itemPedido": "FC542",
+    "conversaoAluminorte": "U877",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 92,
+    "itemPedido": "FC543",
+    "conversaoAluminorte": "U878",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 93,
+    "itemPedido": "Gradil",
+    "conversaoAluminorte": "CG083",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 94,
+    "itemPedido": "IN205",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "GS034 (lambril de 108mm)",
+    "comentarios": "IN205 A- Lambril de 114,5mm"
+  },
+  {
+    "row": 95,
+    "itemPedido": "L642 = L741",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L013 (25,4 por 1,6mm)",
+    "comentarios": "L642 - 25,4 por 1,0mm"
+  },
+  {
+    "row": 96,
+    "itemPedido": "L715",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L519",
+    "comentarios": "Batedor de porta"
+  },
+  {
+    "row": 97,
+    "itemPedido": "LAMBRIL",
+    "conversaoAluminorte": "Y355",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 98,
+    "itemPedido": "LAMBRIL DUPLO MAIOR",
+    "conversaoAluminorte": "TMR1881",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 99,
+    "itemPedido": "LAMBRIL DUPLO MENOR",
+    "conversaoAluminorte": "GS034",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 100,
+    "itemPedido": "LB036",
+    "conversaoAluminorte": "Y335",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 101,
+    "itemPedido": "LG037",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "VZ060 - não é tubular",
+    "comentarios": ""
+  },
+  {
+    "row": 102,
+    "itemPedido": "LG041",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG027",
+    "comentarios": "ESQUADRITECH"
+  },
+  {
+    "row": 103,
+    "itemPedido": "LG057",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "LG057 é uma travessa"
+  },
+  {
+    "row": 104,
+    "itemPedido": "LG060",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 105,
+    "itemPedido": "LG116",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG066 ou 80015",
+    "comentarios": "ESQUADRITECH"
+  },
+  {
+    "row": 106,
+    "itemPedido": "LG124",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG002 + LG028",
+    "comentarios": ""
+  },
+  {
+    "row": 107,
+    "itemPedido": "LG125",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG047",
+    "comentarios": ""
+  },
+  {
+    "row": 108,
+    "itemPedido": "LG127",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG052 ou LG021 - com baguete",
+    "comentarios": "LG127 - sem baguete"
+  },
+  {
+    "row": 109,
+    "itemPedido": "LG132",
+    "conversaoAluminorte": "80097",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 110,
+    "itemPedido": "LG137",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG021 OU LG052 - Gold III com baguete",
+    "comentarios": ""
+  },
+  {
+    "row": 111,
+    "itemPedido": "LG140",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG021 OU LG052 - Gold III com baguete",
+    "comentarios": ""
+  },
+  {
+    "row": 112,
+    "itemPedido": "LG143",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG066",
+    "comentarios": ""
+  },
+  {
+    "row": 113,
+    "itemPedido": "LG145",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Usar 1 barra do LG158 + 2 barras LG028",
+    "comentarios": ""
+  },
+  {
+    "row": 114,
+    "itemPedido": "LG146",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG007 + BG057",
+    "comentarios": ""
+  },
+  {
+    "row": 115,
+    "itemPedido": "LG147",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG055 + BG057",
+    "comentarios": ""
+  },
+  {
+    "row": 116,
+    "itemPedido": "LG150",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG052",
+    "comentarios": ""
+  },
+  {
+    "row": 117,
+    "itemPedido": "LG158",
+    "conversaoAluminorte": "Trabalhamos",
+    "sugestao": "Item de Portfólio",
+    "comentarios": ""
+  },
+  {
+    "row": 118,
+    "itemPedido": "LG159",
+    "conversaoAluminorte": "Trabalhamos",
+    "sugestao": "LG047",
+    "comentarios": ""
+  },
+  {
+    "row": 119,
+    "itemPedido": "LG160",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG071 ou 80067C",
+    "comentarios": ""
+  },
+  {
+    "row": 120,
+    "itemPedido": "LG161",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG160",
+    "comentarios": "ESQUADRITECH"
+  },
+  {
+    "row": 121,
+    "itemPedido": "LG164",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG064",
+    "comentarios": ""
+  },
+  {
+    "row": 122,
+    "itemPedido": "LG166",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "MN002 + LG044",
+    "comentarios": ""
+  },
+  {
+    "row": 123,
+    "itemPedido": "LG167",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "MN032",
+    "comentarios": ""
+  },
+  {
+    "row": 124,
+    "itemPedido": "LG168",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "MN001",
+    "comentarios": "Sugestão da Aludesign"
+  },
+  {
+    "row": 125,
+    "itemPedido": "LG170",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "MN003",
+    "comentarios": "Sugestão da Aludesign"
+  },
+  {
+    "row": 126,
+    "itemPedido": "VZ028",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Z201 - passo de 74 mm",
+    "comentarios": "VZ028 - PASSO DE 81"
+  },
+  {
+    "row": 127,
+    "itemPedido": "VZ037",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 128,
+    "itemPedido": "LG175",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 129,
+    "itemPedido": "ME014",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "ME013",
+    "comentarios": ""
+  },
+  {
+    "row": 130,
+    "itemPedido": "MG25247 / MG25225",
+    "conversaoAluminorte": "",
+    "sugestao": "SU7218 - Item sem baguete",
+    "comentarios": "MG25225 é o SU225 COM ESCOVA PARA BAIXO, usa baguete. MG25247 é o MG25225 um pouco maior"
+  },
+  {
+    "row": 131,
+    "itemPedido": "MG32034",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG062",
+    "comentarios": ""
+  },
+  {
+    "row": 132,
+    "itemPedido": "MG32035",
+    "conversaoAluminorte": "80035 (FORA DE PORTFÓLIO)",
+    "sugestao": "LG160",
+    "comentarios": ""
+  },
+  {
+    "row": 133,
+    "itemPedido": "MG32041",
+    "conversaoAluminorte": "80041",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 134,
+    "itemPedido": "MG32049",
+    "conversaoAluminorte": "LG124 (80049)",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 135,
+    "itemPedido": "MH153",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "A058",
+    "comentarios": "ESQUADRITECH"
+  },
+  {
+    "row": 136,
+    "itemPedido": "PC004",
+    "conversaoAluminorte": "D078",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 137,
+    "itemPedido": "PC027",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 138,
+    "itemPedido": "Perfil para baú - Cantoneira",
+    "conversaoAluminorte": "23-033C = TMR907C-8500",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 139,
+    "itemPedido": "Perfil para baú - Coluna Frontal",
+    "conversaoAluminorte": "TMR-739",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 140,
+    "itemPedido": "Perfil para baú - Longarina Inferior / Saia Recrosul",
+    "conversaoAluminorte": "19364",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 141,
+    "itemPedido": "Perfil para baú - Piso Canaletado",
+    "conversaoAluminorte": "TMR1346",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 142,
+    "itemPedido": "Perfil para Portão Buzios",
+    "conversaoAluminorte": "D141",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 143,
+    "itemPedido": "PL169",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L025 (50,8 por 3,2 mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 144,
+    "itemPedido": "PL-252",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": "Cantoneira 50x12x2"
+  },
+  {
+    "row": 145,
+    "itemPedido": "PR25201",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU7218 (E25001) - esse é sem baguete",
+    "comentarios": "PR25201 --> usa baguete"
+  },
+  {
+    "row": 146,
+    "itemPedido": "PR42001 / PR42002",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Somente temos o da linha 30 - PR30001",
+    "comentarios": ""
+  },
+  {
+    "row": 147,
+    "itemPedido": "PU012",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U555B (22,00 por 11,00 com 1,0mm de espessura)",
+    "comentarios": "PU012 --> 7/8 por 1/8"
+  },
+  {
+    "row": 148,
+    "itemPedido": "PU014",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U064 (22,22 x 22,22 com 2,38mm)",
+    "comentarios": "PU014 --> 25,4x25,4 com 2,0mm de espessura"
+  },
+  {
+    "row": 149,
+    "itemPedido": "PU1203",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 150,
+    "itemPedido": "PU210",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U555 - 25x16 com 1,3 mm",
+    "comentarios": "PU210 - 25,4x12,7 com 2,00 mm"
+  },
+  {
+    "row": 151,
+    "itemPedido": "PU214",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": "PU214 - 1.1/4 x 1/2 com 3,17 mm"
+  },
+  {
+    "row": 152,
+    "itemPedido": "PU312",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U064 (22,22 x 22,22 com 2,38mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 153,
+    "itemPedido": "PU344",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U555 (25 x 16 com 1,3 mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 154,
+    "itemPedido": "PU639",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "M027 - 50mm por 49,15",
+    "comentarios": ""
+  },
+  {
+    "row": 155,
+    "itemPedido": "Régua de Pedreiro",
+    "conversaoAluminorte": "D079, 4576 (+ leve), 4560 e 4563",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 156,
+    "itemPedido": "RM018",
+    "conversaoAluminorte": "ME013",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 157,
+    "itemPedido": "RO053",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG111 - menor",
+    "comentarios": "RO053 - linha única - tampa do trilho"
+  },
+  {
+    "row": 158,
+    "itemPedido": "SI320",
+    "conversaoAluminorte": "LG043",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 159,
+    "itemPedido": "SP-200",
+    "conversaoAluminorte": "CM063",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 160,
+    "itemPedido": "STL1403 / AT409",
+    "conversaoAluminorte": "PR003",
+    "sugestao": "-",
+    "comentarios": "TRILHO MACARRÃO"
+  },
+  {
+    "row": 161,
+    "itemPedido": "SU290",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU242",
+    "comentarios": "Sugestão da EMPORIO EMPREENDIMENTOS"
+  },
+  {
+    "row": 162,
+    "itemPedido": "T021",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "T076 (25,4 x25,4 com 1,6 mm de espessura) ou T095 (25x28 mm)",
+    "comentarios": "T021 (38,1x38,1 com 3,18 mm)"
+  },
+  {
+    "row": 163,
+    "itemPedido": "Tampa para Portão basculante",
+    "conversaoAluminorte": "29160-5000",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 164,
+    "itemPedido": "Tela Mosqueteiro",
+    "conversaoAluminorte": "A058",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 165,
+    "itemPedido": "TG001",
+    "conversaoAluminorte": "TUB4501",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 166,
+    "itemPedido": "TG003",
+    "conversaoAluminorte": "TUB4545P - não trabalhamos",
+    "sugestao": "TUB4545L (38,1 x 25,4 com 1,0mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 167,
+    "itemPedido": "TG004",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 168,
+    "itemPedido": "TG005 / TUB4560",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4504 - (2X1 com 2,00 mm de espessura) ou TUB4563 (1,2 mm de espessura)",
+    "comentarios": ""
+  },
+  {
+    "row": 169,
+    "itemPedido": "TG008",
+    "conversaoAluminorte": "TUB4513",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 170,
+    "itemPedido": "TG013",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4517 (76,2 com 38,10 com 2,00 mm)",
+    "comentarios": "TG013 - 76,20 por 25,4 com 2,0mm"
+  },
+  {
+    "row": 171,
+    "itemPedido": "TG019",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4599 (101,6 X 50,8 com 2,00) ou TUB4530 (3,05 mm de espessura)",
+    "comentarios": "TG019 --> 101,6 X 50,8 com 2,40 mm"
+  },
+  {
+    "row": 172,
+    "itemPedido": "TG020",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4599 (101,6 X 50,8 com 2,00) ou TUB4530 (3,05 mm de espessura)",
+    "comentarios": "TG020 --> 101,6 X 50,8 com 2,80 mm"
+  },
+  {
+    "row": 173,
+    "itemPedido": "TG023",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4599 (101,6 X 50,8 com 2,00) ou TUB4530 (3,05 mm de espessura)",
+    "comentarios": "TG023 - 150x 50 com 4,00 mm"
+  },
+  {
+    "row": 174,
+    "itemPedido": "TG024",
+    "conversaoAluminorte": "TUB4520",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 175,
+    "itemPedido": "TG031",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4559 (152,4 x 50,8 x 3,00 mm)",
+    "comentarios": "TG-031 – 150x38x3,17mm"
+  },
+  {
+    "row": 176,
+    "itemPedido": "TG032",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4513 (50,8 x 38,10 com 2,0 mm)",
+    "comentarios": "TUBO 50,8 X B 38,1 - E 3,17 MM"
+  },
+  {
+    "row": 177,
+    "itemPedido": "TG033",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 178,
+    "itemPedido": "TG036",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4559 (152,4 x 50,8 x 3,00 mm) OU TUB4530 (101,6 X 50,8 X 3,05 mm de espessura)",
+    "comentarios": "TUBO - A 127,00 X B 50,80 - E 3,18"
+  },
+  {
+    "row": 179,
+    "itemPedido": "TG037",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4520 (152,4 x 38,1 com 3,2 mm)",
+    "comentarios": "TG037 - 152,4 x 38,1 com 2,4 mm"
+  },
+  {
+    "row": 180,
+    "itemPedido": "TG039",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4599 (101,6 X 50,8 com 2,00)",
+    "comentarios": "TG-039 – 100x38x2mm"
+  },
+  {
+    "row": 181,
+    "itemPedido": "TG040",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 182,
+    "itemPedido": "TG042",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4559 (152,4 x 50,8 x 3,00 mm)",
+    "comentarios": "TG042 - 152,4 X B 76,2 - E 4,77 MM"
+  },
+  {
+    "row": 183,
+    "itemPedido": "TG046",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4559 (152,4 x 50,8 x 3,00 mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 184,
+    "itemPedido": "TG047",
+    "conversaoAluminorte": "TUB4542 - Fora de Portfólio",
+    "sugestao": "TUB4559 (152,4 x 50,8 x 3,00 mm) OU TUB4530 (101,6 X 50,8 X 3,05 mm de espessura) OU TUB4599 (101,6 X 50,8 com 2,00)",
+    "comentarios": "TG047 - 125x80 com 2,5 mm"
+  },
+  {
+    "row": 185,
+    "itemPedido": "TG049",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4509 (30 x 20 x 2,00mm)",
+    "comentarios": "TUBO 30,00 X B 20,00 - E 1,50"
+  },
+  {
+    "row": 186,
+    "itemPedido": "TG053",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4545L (38,1 x 25,4 com 1,0mm)",
+    "comentarios": "TUBO - 40 X B 20 - E 2 MM"
+  },
+  {
+    "row": 187,
+    "itemPedido": "TG072",
+    "conversaoAluminorte": "TUB4599",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 188,
+    "itemPedido": "TG074",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4501A (25,4 x12,7 com 1,0 mm)",
+    "comentarios": "25,4 X B 12,70 - E 1,3 MM"
+  },
+  {
+    "row": 189,
+    "itemPedido": "TG088",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4501A (25,4 x 12,7 com 1,0 mm)",
+    "comentarios": "TG088 --> 22X12,3X1 MM"
+  },
+  {
+    "row": 190,
+    "itemPedido": "TG091",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4543 (60,33 x 38,1 com 2,00 mm)",
+    "comentarios": "TG091 - 63,5 x 21,00 com 2,0 mm"
+  },
+  {
+    "row": 191,
+    "itemPedido": "TG097",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4509 (30 x 20 x 2,00mm) ou TUB4545L (38,1x25,4 com 1,0mm)",
+    "comentarios": "TG097 - 45x20 com 1,6mm"
+  },
+  {
+    "row": 192,
+    "itemPedido": "TG103",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "TG103 --> Tubo de 25x19x1,2 mm"
+  },
+  {
+    "row": 193,
+    "itemPedido": "TG108",
+    "conversaoAluminorte": "TUB4513A - fora de portfólio",
+    "sugestao": "TUB4513 (50,8 x 38,10 com 2,0 mm) - mais pesado",
+    "comentarios": ""
+  },
+  {
+    "row": 194,
+    "itemPedido": "TG112",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4517 (76,2 com 38,10 com 2,00 mm)",
+    "comentarios": "TG112 - 80x40 com 1,5 mm de espessura"
+  },
+  {
+    "row": 195,
+    "itemPedido": "TG119",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4501A (25,4 x 12,7 com 1,0 mm)",
+    "comentarios": "TG119 - Tubo 20 X B 12 - E 1,1 MM"
+  },
+  {
+    "row": 196,
+    "itemPedido": "TG123",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4545L (38,1 x 25,4 com 1,0mm)",
+    "comentarios": "TG123 - TUBO RETANGULAR 38,1X25,4MM"
+  },
+  {
+    "row": 197,
+    "itemPedido": "TG185",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4545L (38,1 x 25,4 com 1,0mm)",
+    "comentarios": "TG185 = 38,1x25,4x1,5mm"
+  },
+  {
+    "row": 198,
+    "itemPedido": "TG2015",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "-",
+    "comentarios": "Ferramenta da Aludesign"
+  },
+  {
+    "row": 199,
+    "itemPedido": "TG203",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "D078",
+    "comentarios": ""
+  },
+  {
+    "row": 200,
+    "itemPedido": "TG2515",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4501A (25,4 x 12,7 com 1,0 mm)",
+    "comentarios": "TG2515 - Tubo de 1” x ½” x 1,0mm"
+  },
+  {
+    "row": 201,
+    "itemPedido": "TG3025",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TG030 (30 x 20 x 1,2 mm) - mínimo 300kg",
+    "comentarios": ""
+  },
+  {
+    "row": 202,
+    "itemPedido": "TMR1136",
+    "conversaoAluminorte": "78719",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 203,
+    "itemPedido": "TQ005",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4003 (19,05 por 1,5mm)",
+    "comentarios": "TQ005 (TUB4051) - 19,05 por 1,2 mm"
+  },
+  {
+    "row": 204,
+    "itemPedido": "TQ007",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4008 (25,4 por 1,5 mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 205,
+    "itemPedido": "TQ010",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4008 (25,4 por 1,5 mm)",
+    "comentarios": "TQ010 - 25,4 x 2,00 mm"
+  },
+  {
+    "row": 206,
+    "itemPedido": "TQ013",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4014 (38,1 por 1,5 mm)",
+    "comentarios": "38X38 com 1,0 mm"
+  },
+  {
+    "row": 207,
+    "itemPedido": "TQ015",
+    "conversaoAluminorte": "TUB4015 (fora de portfólio)",
+    "sugestao": "TUB4014 (38,1 por 1,5 mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 208,
+    "itemPedido": "TQ017",
+    "conversaoAluminorte": "TUB4020",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 209,
+    "itemPedido": "TQ018",
+    "conversaoAluminorte": "TUB4023",
+    "sugestao": "NÃO TRABALHAMOS",
+    "comentarios": ""
+  },
+  {
+    "row": 210,
+    "itemPedido": "TQ019",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4034 (80x80 com 1,8mm)",
+    "comentarios": "TQ019 - 70x70 com2,8 mm"
+  },
+  {
+    "row": 211,
+    "itemPedido": "TQ020",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4054 (101,6 x 101,6 com 2,5 mm)",
+    "comentarios": "TQ020 - 101,6 x 101,6 com 2,8 mm"
+  },
+  {
+    "row": 212,
+    "itemPedido": "TQ021",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4054 (101,6 x 101,6 com 2,5 mm)",
+    "comentarios": "TQ020 - 101,6 x 101,6 com 3,8 mm"
+  },
+  {
+    "row": 213,
+    "itemPedido": "TQ025",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4008 (25,4 por 1,5 mm)",
+    "comentarios": "TQ025 - A 25,40 - E 3,18"
+  },
+  {
+    "row": 214,
+    "itemPedido": "TQ034",
+    "conversaoAluminorte": "TUB4054",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 215,
+    "itemPedido": "TQ036",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4003 (19,05 por 1,5mm)",
+    "comentarios": "TUBO QUADRADO - A 20,00 - E 2,00"
+  },
+  {
+    "row": 216,
+    "itemPedido": "TQ050",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4020 (50,8 x 50,8 com 1,90 mm de espessura)",
+    "comentarios": "TQ050 - 50 x 50 com 2,0mm"
+  },
+  {
+    "row": 217,
+    "itemPedido": "TQ053",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4020 (50,8 x 50,8 com 1,90 mm de espessura) ou TUB4034 (80x80 mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 218,
+    "itemPedido": "TQ053",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4020 (50,8 x 50,8 com 1,90 mm de espessura)",
+    "comentarios": "Tubo 60 x 1,5"
+  },
+  {
+    "row": 219,
+    "itemPedido": "TR-085",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB091 (50,5 diametro ext com 2,0 mm de espessura)",
+    "comentarios": "TR085 - 44,45 d ext e 3,18 mm de espessura"
+  },
+  {
+    "row": 220,
+    "itemPedido": "Trilho Stanley - segura a porta por cima",
+    "conversaoAluminorte": "AL068; U1048; U163; U1098; U164",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 221,
+    "itemPedido": "TUB018",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB019 (15,87 com 1,58 mm)",
+    "comentarios": ""
+  },
+  {
+    "row": 222,
+    "itemPedido": "TUB092",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 223,
+    "itemPedido": "TUB4015",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4014 (38,1 por 1,5 mm)",
+    "comentarios": "TUB4014 (38,1 por 2,00 mm)"
+  },
+  {
+    "row": 224,
+    "itemPedido": "TUB4024",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4034 (80 x 80mm com 1,8 mm) ou TUB4020 (50,8x50,8 com 1,5mm)",
+    "comentarios": "TQ066 - 3\" - 76,20MM"
+  },
+  {
+    "row": 225,
+    "itemPedido": "TUB4025",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4054 (101,6 x 101,6 com 2,5 mm)",
+    "comentarios": "TUB4025 - QUAD 4\" X 3,8MM"
+  },
+  {
+    "row": 226,
+    "itemPedido": "TUB4052",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4510A - 25,4 x 12,7 com 1,0mm",
+    "comentarios": "TUB4052 - 25,4 x 12,7 com 1,2mm"
+  },
+  {
+    "row": 227,
+    "itemPedido": "TUB4518 / TG081",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4517 (76,2 com 38,10 com 2,00 mm)",
+    "comentarios": "TUB4518 (76,2 x 38,1 com 3,05 mm)"
+  },
+  {
+    "row": 228,
+    "itemPedido": "TUB4528",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4517 (76,2 com 38,10 com 2,00 mm)",
+    "comentarios": "TUB4528 - 76,2 x 50,8 com 2,0 mm"
+  },
+  {
+    "row": 229,
+    "itemPedido": "TUB6001",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4517 (76,2 com 38,10 com 2,00 mm)",
+    "comentarios": "TUB6001 - 76,2x 38,1 com 1,5mm"
+  },
+  {
+    "row": 230,
+    "itemPedido": "U074",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 231,
+    "itemPedido": "U1167",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U058 -19,05 x 19,05 com 2mm",
+    "comentarios": "U1167 - 19,05x19,05 com 1,58 mm"
+  },
+  {
+    "row": 232,
+    "itemPedido": "U165",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "AL068 - Guia Stanley de 48x48 mm",
+    "comentarios": "U165-Guia Stanley de 35x35 mm"
+  },
+  {
+    "row": 233,
+    "itemPedido": "U398 / BX012",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U058 -19,05 x 19,05 com 2mm",
+    "comentarios": "U de 20 (h) por 18(L)"
+  },
+  {
+    "row": 234,
+    "itemPedido": "U489",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "Perfil U --> (L)60x25 com 1,5 mm"
+  },
+  {
+    "row": 235,
+    "itemPedido": "U555A",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U555 (25X16 com 1,3 mm) ou U555B (22x11 com 1,0 mm)",
+    "comentarios": "U com 14,2x25 mm"
+  },
+  {
+    "row": 236,
+    "itemPedido": "U653",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 237,
+    "itemPedido": "US285",
+    "conversaoAluminorte": "Z203CF",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 238,
+    "itemPedido": "US294",
+    "conversaoAluminorte": "VZ051CF",
+    "sugestao": "-",
+    "comentarios": ""
+  },
+  {
+    "row": 239,
+    "itemPedido": "US621",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 240,
+    "itemPedido": "US622",
+    "conversaoAluminorte": "Z203cf",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 241,
+    "itemPedido": "VT102",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU102",
+    "comentarios": ""
+  },
+  {
+    "row": 242,
+    "itemPedido": "VT479",
+    "conversaoAluminorte": "SU279",
+    "sugestao": "",
+    "comentarios": "GILSON"
+  },
+  {
+    "row": 243,
+    "itemPedido": "VT859",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU056",
+    "comentarios": "GILSON"
+  },
+  {
+    "row": 244,
+    "itemPedido": "VT861",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU061",
+    "comentarios": "GILSON"
+  },
+  {
+    "row": 245,
+    "itemPedido": "VZ050",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Z201 - passo de 74 mm",
+    "comentarios": ""
+  },
+  {
+    "row": 246,
+    "itemPedido": "U666",
+    "conversaoAluminorte": "Trabalhamos",
+    "sugestao": "Perfil U 48,2mm de altura por 16,4 mm de largura",
+    "comentarios": "Jegão"
+  },
+  {
+    "row": 247,
+    "itemPedido": "PR32801",
+    "conversaoAluminorte": "LG3555",
+    "sugestao": "-",
+    "comentarios": "LG007 com escovinha para baixo sem baguete"
+  },
+  {
+    "row": 248,
+    "itemPedido": "U1244",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U399 (47,5mm de base e 17mm de altura",
+    "comentarios": "Perfil para Box - U1244 -46,1mm por 17 mm de altura"
+  },
+  {
+    "row": 249,
+    "itemPedido": "TG070",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4517 (76,2 com 38,10 com 2,00 mm)",
+    "comentarios": "TG070 - 75x25x1,5mm"
+  },
+  {
+    "row": 250,
+    "itemPedido": "CT205",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L093(25,4x12,7 com 3,2 mm) ou L013 (25,4x25,4 por 1,6mm)",
+    "comentarios": "CT205 - 25,4x19,05 com 3,18 mm"
+  },
+  {
+    "row": 251,
+    "itemPedido": "TUB4033",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4034 (80x80 com 1,8 mm)",
+    "comentarios": "TUB4033 (76,2x76,2 com 2,00mm"
+  },
+  {
+    "row": 252,
+    "itemPedido": "SU023",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU011(janela) ou SU230(porta). Verificar se não é o LG023",
+    "comentarios": "SU023--> trilho de 3 planos"
+  },
+  {
+    "row": 253,
+    "itemPedido": "SU7218",
+    "conversaoAluminorte": "temos",
+    "sugestao": "SU com a Escova para baixo",
+    "comentarios": "-"
+  },
+  {
+    "row": 254,
+    "itemPedido": "CM210",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "CM063 -23,8mm de base e 24 mm de altura ou CM151 (28,2 de base e 47mm de altura)",
+    "comentarios": "CM210 - 24mm de base e 38,2 de altura"
+  },
+  {
+    "row": 255,
+    "itemPedido": "TG143",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB437 (101,6x38,1 com 2,5 mm de espessura",
+    "comentarios": "TG143 = 101,4x25,4 com 3,2mm de espessura"
+  },
+  {
+    "row": 256,
+    "itemPedido": "U068",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U555B (22x11 com 1,0 mm)",
+    "comentarios": "U068 - 25x9 mm"
+  },
+  {
+    "row": 257,
+    "itemPedido": "A139",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "A048",
+    "comentarios": "A139 é maior e tem olhal"
+  },
+  {
+    "row": 258,
+    "itemPedido": "U1244",
+    "conversaoAluminorte": "U399 (BX059)",
+    "sugestao": "-",
+    "comentarios": "Rose que me disse isso"
+  },
+  {
+    "row": 259,
+    "itemPedido": "PC007",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Y181",
+    "comentarios": "Rose que me disse isso"
+  },
+  {
+    "row": 260,
+    "itemPedido": "20SPF42",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "20SPF43 + 20SPM19",
+    "comentarios": ""
+  },
+  {
+    "row": 261,
+    "itemPedido": "CADEIRINHA DE 10MM",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Y343 - fora de portifolio",
+    "comentarios": ""
+  },
+  {
+    "row": 262,
+    "itemPedido": "VT1041",
+    "conversaoAluminorte": "U1098",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 263,
+    "itemPedido": "TMR2443",
+    "conversaoAluminorte": "VZ060 SEM OLHAL (VZ060L)",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 264,
+    "itemPedido": "TQ032",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "TQ032 (65,00 com 2,00mm"
+  },
+  {
+    "row": 265,
+    "itemPedido": "CG175",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "CG075 - PERFIL J",
+    "comentarios": "CG175 - Gradiluk da Olga"
+  },
+  {
+    "row": 266,
+    "itemPedido": "MG32083",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG047 ou LG159 caso o cliente queria usar o LG111",
+    "comentarios": ""
+  },
+  {
+    "row": 267,
+    "itemPedido": "MG32084",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG116",
+    "comentarios": ""
+  },
+  {
+    "row": 268,
+    "itemPedido": "MG32086",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG111",
+    "comentarios": "Avisar o cliente para trocar para Gold 4"
+  },
+  {
+    "row": 269,
+    "itemPedido": "LG115",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG047",
+    "comentarios": ""
+  },
+  {
+    "row": 270,
+    "itemPedido": "SU289",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU243",
+    "comentarios": "EMPORIO EMPREENDIMENTOS QUE SUGERIU"
+  },
+  {
+    "row": 271,
+    "itemPedido": "392097C",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG157",
+    "comentarios": "Perfis diferentes, mas fazem a mesma função. Dá diferença nas folgas"
+  },
+  {
+    "row": 272,
+    "itemPedido": "MG32067",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG072",
+    "comentarios": ""
+  },
+  {
+    "row": 273,
+    "itemPedido": "MG32118",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "PR32507",
+    "comentarios": "LG007 com escovinha para baixo"
+  },
+  {
+    "row": 274,
+    "itemPedido": "TQ072",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4024 - 1,58 com (fora de portfólio). De portfólio --> TUB4034 (80x80 mm)",
+    "comentarios": "TQ072 - 76,2x76,2 com 2,0 mm"
+  },
+  {
+    "row": 275,
+    "itemPedido": "MN049",
+    "conversaoAluminorte": "FORA DE PORTFÓLIO",
+    "sugestao": "MN041",
+    "comentarios": ""
+  },
+  {
+    "row": 276,
+    "itemPedido": "TR025",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB028 (19,05 com 1,5 mm de diâmetro)",
+    "comentarios": "TR025 (20,6 x 2,38 de diâmetro)"
+  },
+  {
+    "row": 277,
+    "itemPedido": "BAR293",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "BAR016 (25,4 COM 3,17 MM)",
+    "comentarios": "BAR293 (25,4 COM 3,18 MM) - ABA"
+  },
+  {
+    "row": 278,
+    "itemPedido": "VZ074",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Z203",
+    "comentarios": "Medidas de diferentes"
+  },
+  {
+    "row": 279,
+    "itemPedido": "VZ075",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "VZ024",
+    "comentarios": "Medidas de diferentes"
+  },
+  {
+    "row": 280,
+    "itemPedido": "LG117",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG005 - GOLD3",
+    "comentarios": ""
+  },
+  {
+    "row": 281,
+    "itemPedido": "TUQ059",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4011 (31,75x31,75 com 1,5 mm de espessura)",
+    "comentarios": "No catálogo da Tera, a conversão é direta"
+  },
+  {
+    "row": 282,
+    "itemPedido": "RB011",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U878",
+    "comentarios": "RB011 é diferente, mas o encaixe é o mesmo"
+  },
+  {
+    "row": 283,
+    "itemPedido": "TUB4544",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4545L (38,1x25,4 com 1,0 mm de espessura)",
+    "comentarios": "TUBO RETANGULAR 20,00 X 45,00 X 1,60 MM"
+  },
+  {
+    "row": 284,
+    "itemPedido": "TR1009",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB003 (diâmetro ext 9,52 com 1,58 mm)",
+    "comentarios": "TR-1009 = med. 9,50 com 2,65mm de espessura"
+  },
+  {
+    "row": 285,
+    "itemPedido": "CT322",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "CT322 - 63,5x88,9 largura com 6,35 mm"
+  },
+  {
+    "row": 286,
+    "itemPedido": "L509",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Substituir por alguma cantoneira",
+    "comentarios": "L509 é um canto para juntar 2 lambris"
+  },
+  {
+    "row": 287,
+    "itemPedido": "78001",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4543 (60X38 com 1,7 mm)",
+    "comentarios": "tubo de 60x38"
+  },
+  {
+    "row": 288,
+    "itemPedido": "GS017",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4545L (38,1X25,4 com 1,0 mm)",
+    "comentarios": "TUBO RETANGULAR 38,1X25,1X1,2"
+  },
+  {
+    "row": 289,
+    "itemPedido": "FA341",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA265 - este é um pouco maior",
+    "comentarios": ""
+  },
+  {
+    "row": 290,
+    "itemPedido": "PS303",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA211",
+    "comentarios": "FACHADA DA PERFIL ES"
+  },
+  {
+    "row": 291,
+    "itemPedido": "PS348",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA235",
+    "comentarios": "FACHADA DA PERFIL ES"
+  },
+  {
+    "row": 292,
+    "itemPedido": "PS320",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA245",
+    "comentarios": "FACHADA DA PERFIL ES"
+  },
+  {
+    "row": 293,
+    "itemPedido": "PS305",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA200",
+    "comentarios": "FACHADA DA PERFIL ES"
+  },
+  {
+    "row": 294,
+    "itemPedido": "TQ512",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4054 (101,6x101,6 com 2,5 mm)",
+    "comentarios": "TQ512 = 152,4x152,4 com 3,00 mm"
+  },
+  {
+    "row": 295,
+    "itemPedido": "PU008",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U058 (19,05x19,05 com 2,00 mm)",
+    "comentarios": "PU008 (19,05x19,05 com 1,59 mm)"
+  },
+  {
+    "row": 296,
+    "itemPedido": "TG011",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4517 (72,2x38,1 com 2,5 mm)",
+    "comentarios": "TG011 (75x51,6 com 2,2 por mm)"
+  },
+  {
+    "row": 297,
+    "itemPedido": "LG105",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG059",
+    "comentarios": "BAGUETE"
+  },
+  {
+    "row": 298,
+    "itemPedido": "CT285",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L093 (25,4x12,7 com 3,2 mm)",
+    "comentarios": "CT285 - 12,7 x 19mm"
+  },
+  {
+    "row": 299,
+    "itemPedido": "LG117",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG005 - Não utiliza o LG111",
+    "comentarios": ""
+  },
+  {
+    "row": 300,
+    "itemPedido": "LG172",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "MN030 - Não utiliza o LG111",
+    "comentarios": ""
+  },
+  {
+    "row": 301,
+    "itemPedido": "MH006",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "MN007",
+    "comentarios": ""
+  },
+  {
+    "row": 302,
+    "itemPedido": "SU222",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU122",
+    "comentarios": "Marco inferior da suprema de 4 planos"
+  },
+  {
+    "row": 303,
+    "itemPedido": "T123",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "T076 (25,4 com 1,6 mm de espessura",
+    "comentarios": "T123 (25,4 com 1,2 mm de espessura)"
+  },
+  {
+    "row": 304,
+    "itemPedido": "ALG27026",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU060",
+    "comentarios": "MONTANTE LATERAL"
+  },
+  {
+    "row": 305,
+    "itemPedido": "391822E",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "39811",
+    "comentarios": "Caixa de Portão da ASA - maior que o 39811"
+  },
+  {
+    "row": 306,
+    "itemPedido": "31085C",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "?",
+    "comentarios": "Travessa de portão"
+  },
+  {
+    "row": 307,
+    "itemPedido": "TLB600",
+    "conversaoAluminorte": "GS034",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 308,
+    "itemPedido": "TLB502",
+    "conversaoAluminorte": "Y335",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 309,
+    "itemPedido": "ALG09626",
+    "conversaoAluminorte": "SU096",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 310,
+    "itemPedido": "SU190",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU055 + SU291",
+    "comentarios": "SU190 - montante central"
+  },
+  {
+    "row": 311,
+    "itemPedido": "SU059",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU060 + SU291",
+    "comentarios": ""
+  },
+  {
+    "row": 312,
+    "itemPedido": "TG029",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4545L(38,1x25,4 com 1,0 mm)",
+    "comentarios": "TG029 --> 3,18 mm de espessura"
+  },
+  {
+    "row": 313,
+    "itemPedido": "M68",
+    "conversaoAluminorte": "U531",
+    "sugestao": "U531 - fora de portfólio",
+    "comentarios": "Código da Marte Alumínio"
+  },
+  {
+    "row": 314,
+    "itemPedido": "M17",
+    "conversaoAluminorte": "U058",
+    "sugestao": "",
+    "comentarios": "Código da Marte Alumínio"
+  },
+  {
+    "row": 315,
+    "itemPedido": "AK134",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "80060 - 140mm de largura",
+    "comentarios": ""
+  },
+  {
+    "row": 316,
+    "itemPedido": "PR001",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TMR1881",
+    "comentarios": "Diferença é somente nos reforços internos"
+  },
+  {
+    "row": 317,
+    "itemPedido": "LG163",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG128",
+    "comentarios": ""
+  },
+  {
+    "row": 318,
+    "itemPedido": "WZM474",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TMR1221 - menor e fora de portfólio",
+    "comentarios": ""
+  },
+  {
+    "row": 319,
+    "itemPedido": "AL86",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "U555B (22mm de altura x 11 de base com 1 de espessura)",
+    "comentarios": "al86 - 10,5x22 mm"
+  },
+  {
+    "row": 320,
+    "itemPedido": "CT250",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L100 (h 38,1x b 25,4 com 3,2 mm)",
+    "comentarios": "CT250 (b 20 x h 40 com 2,00 mm)"
+  },
+  {
+    "row": 321,
+    "itemPedido": "CT307",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L093(25,4x12,7 com 3,2 mm)",
+    "comentarios": "CT307 (12X25 com 1,3 mm)"
+  },
+  {
+    "row": 322,
+    "itemPedido": "PLB261",
+    "conversaoAluminorte": "RP020",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 323,
+    "itemPedido": "MG32072",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG158",
+    "comentarios": ""
+  },
+  {
+    "row": 324,
+    "itemPedido": "TLB502",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Y335",
+    "comentarios": ""
+  },
+  {
+    "row": 325,
+    "itemPedido": "DP009",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "A058",
+    "comentarios": ""
+  },
+  {
+    "row": 326,
+    "itemPedido": "CG172",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "CG077-guarda corpo diferente",
+    "comentarios": "CG172 é do gradil panorama - asa de avião"
+  },
+  {
+    "row": 327,
+    "itemPedido": "TMR1381",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "GS034 - é mais pesado",
+    "comentarios": "GS034 = TMR1381P"
+  },
+  {
+    "row": 328,
+    "itemPedido": "A299",
+    "conversaoAluminorte": "TMR1881",
+    "sugestao": "-",
+    "comentarios": "-"
+  },
+  {
+    "row": 329,
+    "itemPedido": "25157",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "Z175",
+    "comentarios": "TRABALHAR JUNTO COM O 25514"
+  },
+  {
+    "row": 330,
+    "itemPedido": "TUBO OBLONGO",
+    "conversaoAluminorte": "FORA DE PORTFÓLIO",
+    "sugestao": "CG087 e D070 e TMB009(16,30 largura x 30 de altura com 1 mm de espessura)",
+    "comentarios": "-"
+  },
+  {
+    "row": 331,
+    "itemPedido": "42176 / STL1176 / PR42001",
+    "conversaoAluminorte": "TMR2234",
+    "sugestao": "FORA DE PORTFÓLIO",
+    "comentarios": ""
+  },
+  {
+    "row": 332,
+    "itemPedido": "42030",
+    "conversaoAluminorte": "TMR2233",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 333,
+    "itemPedido": "30377",
+    "conversaoAluminorte": "TMR1882",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 334,
+    "itemPedido": "TQ022",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4054 - 101,6x101,6 com 2,5 mm",
+    "comentarios": "TQ022 - 127mm com 3,00mm de espessura"
+  },
+  {
+    "row": 335,
+    "itemPedido": "CT038",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L747 - 76,2 com 3,0 mm de espessura - fora de portfólio",
+    "comentarios": "CT-038 76,200 9,525"
+  },
+  {
+    "row": 336,
+    "itemPedido": "CT020",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "L014 (25,4 x 3,20 mm)",
+    "comentarios": "CT020 - 25,4 x 4,763 mm"
+  },
+  {
+    "row": 337,
+    "itemPedido": "TQ074",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4011 (31,75x31,75 com 1,5 mm de espessura)",
+    "comentarios": "TQ074 - 30x30 com 1,5 mm de espessura"
+  },
+  {
+    "row": 338,
+    "itemPedido": "TQ016",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4014 (38,1 por 1,5 mm)",
+    "comentarios": "TQ016 - 40X40X2MM"
+  },
+  {
+    "row": 339,
+    "itemPedido": "TQ030 / TUB4067",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4034 (80x80 com 1,8mm)",
+    "comentarios": "TQ030 - 76,2x76,2 com 3,18 mm"
+  },
+  {
+    "row": 340,
+    "itemPedido": "MU025",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "RP010",
+    "comentarios": "MU025 --> Ripado de 25mm de largura da ripa x 13 mm de altura"
+  },
+  {
+    "row": 341,
+    "itemPedido": "PR32601",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG1495",
+    "comentarios": ""
+  },
+  {
+    "row": 342,
+    "itemPedido": "PR32602",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG1494",
+    "comentarios": ""
+  },
+  {
+    "row": 343,
+    "itemPedido": "PR32603",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "LG1496",
+    "comentarios": ""
+  },
+  {
+    "row": 344,
+    "itemPedido": "74003",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4599",
+    "comentarios": "TUBO 100x50"
+  },
+  {
+    "row": 345,
+    "itemPedido": "TG025",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TUB4559 (152,4 x 50,8 com 3,00mm)",
+    "comentarios": "TG025 = 150 x 50 x 3,2mm"
+  },
+  {
+    "row": 346,
+    "itemPedido": "U1030",
+    "conversaoAluminorte": "AL68",
+    "sugestao": "",
+    "comentarios": ""
+  },
+  {
+    "row": 347,
+    "itemPedido": "CX189",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "TMR1881",
+    "comentarios": "As medidas do CX186 são ligeiramente diferentes"
+  },
+  {
+    "row": 348,
+    "itemPedido": "A101",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "",
+    "comentarios": "Conhecido como igrejinha"
+  },
+  {
+    "row": 349,
+    "itemPedido": "MG32108",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "80042 - item fora de portfólio e maior que o MG32108",
+    "comentarios": ""
+  },
+  {
+    "row": 350,
+    "itemPedido": "SK054",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU270",
+    "comentarios": ""
+  },
+  {
+    "row": 351,
+    "itemPedido": "SK034",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU061",
+    "comentarios": ""
+  },
+  {
+    "row": 352,
+    "itemPedido": "FA344",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "FA236",
+    "comentarios": "FA236 é um pouco maior"
+  },
+  {
+    "row": 353,
+    "itemPedido": "CHR885",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU276",
+    "comentarios": ""
+  },
+  {
+    "row": 354,
+    "itemPedido": "VT806",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU091",
+    "comentarios": ""
+  },
+  {
+    "row": 355,
+    "itemPedido": "VT859",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU056",
+    "comentarios": ""
+  },
+  {
+    "row": 356,
+    "itemPedido": "VT900",
+    "conversaoAluminorte": "NÃO TEMOS",
+    "sugestao": "SU090",
+    "comentarios": ""
+  }
+]

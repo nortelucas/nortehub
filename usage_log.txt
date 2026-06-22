@@ -1,0 +1,21 @@
+=== Aluminorte OCR — Relatório de Uso ===
+
+[2026-05-21]
+  Lucas                  13 uso(s)
+
+[2026-05-20]
+  Lucas                  1 uso(s)
+
+[2026-05-19]
+  Lucas                  3 uso(s)
+  Teste                  1 uso(s)
+
+[2026-05-05]
+  UrsoAgil               5 uso(s)
+  CameloPuro             1 uso(s)
+
+[2026-04-27]
+  UrsoAgil               8 uso(s)
+
+[2026-04-24]
+  UrsoAgil               43 uso(s)
