@@ -1215,6 +1215,19 @@ function isEcgProductRelationDocumentText(text: string): boolean {
   );
 }
 
+function isSmartCemAlumisoftRomaneioDocumentText(text: string): boolean {
+  const normalized = normalizeLineForStrictParsing(text);
+  return (
+    /\bROMANEIO DE PERFIS\b/.test(normalized) &&
+    /\bSMARTCEM\s*-\s*ALUMISOFT SISTEMAS\b/.test(normalized) &&
+    /\bPERFIL\b/.test(normalized) &&
+    /\bTRATAMENTO\s*\/\s*COR\b/.test(normalized) &&
+    /\bQTDE\b/.test(normalized) &&
+    /\bMEDIDA\b/.test(normalized) &&
+    /\bPESO\s*\(?KG\)?/.test(normalized)
+  );
+}
+
 function isCemOneRomaneioDocumentText(text: string): boolean {
   const normalized = normalizeLineForStrictParsing(text);
   return (
@@ -1566,6 +1579,54 @@ function parseEcgProductRelationLine(line: string): StrictCatalogMatch | null {
   };
 }
 
+function parseSmartCemAlumisoftRomaneioLine(line: string): StrictCatalogMatch | null {
+  const normalizedLine = normalizeLineForStrictParsing(line);
+  if (!normalizedLine) return null;
+
+  if (
+    isDocumentMetadataLine(normalizedLine) ||
+    /^(ROMANEIO|PEDIDO DE COMPRA|FATURAR PARA|RAZAO SOCIAL|ENDERECO|CIDADE|CNPJ|INSCR\.?|TEL\.?|FAX|SMARTCEM|INV\b)/.test(normalizedLine) ||
+    /^\d+\s*\/\s*\d+$/.test(normalizedLine) ||
+    /^\d{1,3}(?:\.\d{3})*,\d{3}$/.test(normalizedLine)
+  ) {
+    return null;
+  }
+
+  const codeMatch = normalizedLine.match(STRICT_LINE_PRODUCT_CODE_REGEX);
+  if (!codeMatch) return null;
+
+  const rawCode = codeMatch[1];
+  const rest = normalizedLine.slice(rawCode.length).trim();
+  const parts = rest.split(/\s+/).filter(Boolean);
+  const unitIndex = parts.findIndex(part => part === "KG");
+  if (unitIndex < 1 || unitIndex + 1 >= parts.length) return null;
+
+  const quantityToken = parts[unitIndex - 1];
+  if (!/^\d{1,4}$/.test(quantityToken)) return null;
+  const qtde = Number.parseInt(quantityToken, 10);
+  if (!Number.isFinite(qtde) || qtde <= 0) return null;
+
+  const comprimentoToken = parts[unitIndex + 1];
+  if (!/^\d{3,6}$/.test(comprimentoToken)) return null;
+  const comprimento = Number.parseInt(comprimentoToken, 10);
+  if (!isLikelyBarLength(comprimento)) return null;
+
+  const treatment = parts.slice(0, unitIndex - 1).join(" ");
+  const code = formatRecognizedCatalogCode(rawCode);
+
+  return {
+    code,
+    label: code,
+    qtde,
+    comprimento,
+    acabamento: mapTreatmentToAcabamento(treatment || "NT"),
+    produtoOriginal: line.trim(),
+    autoCatalogCandidate: isAutoCatalogableProfileCode(code),
+    preserveProductCode: true,
+    identificado: true,
+  };
+}
+
 function extractBarCalculationQuantityAndLength(lineAfterCode: string): { qtde?: number; comprimento?: number } {
   const tokens = extractNumberTokens(lineAfterCode);
   const lengthTokenIndex = tokens.findIndex(token => token.integerLike && isLikelyBarLength(token.value));
@@ -1900,10 +1961,11 @@ export async function processTextWithStrictCatalog(
   const foundCodes: StrictCatalogMatch[] = [];
   let currentAcabamento = "NT";
   const isQuoteDeliveryDocument = isQuoteDeliveryDocumentText(text);
-  const isMaterialsRelationDocument = isMaterialsRelationDocumentText(text);
+  const isSmartCemAlumisoftRomaneioDocument = isSmartCemAlumisoftRomaneioDocumentText(text);
+  const isMaterialsRelationDocument = !isSmartCemAlumisoftRomaneioDocument && isMaterialsRelationDocumentText(text);
   const isSmartCemBarSummaryDocument = isSmartCemBarSummaryDocumentText(text);
   const isAluminorteBarrasDocument = isAluminorteRelacaoBarrasDocumentText(text);
-  const isBarListDocument = !isAluminorteBarrasDocument && isBarListDocumentText(text);
+  const isBarListDocument = !isAluminorteBarrasDocument && !isSmartCemAlumisoftRomaneioDocument && isBarListDocumentText(text);
   const isBarCalculationDocument = isBarCalculationDocumentText(text);
   const isSujvidrosCotacaoBarrasDocument = isSujvidrosCotacaoBarrasDocumentText(text);
   const isAcecampPurchaseOrderDocument = isAcecampPurchaseOrderDocumentText(text);
@@ -1987,6 +2049,8 @@ export async function processTextWithStrictCatalog(
         ? parseMaterialsRelationLine(line)
         : isAluminorteBarrasDocument
           ? parseAluminorteRelacaoBarrasLine(line)
+        : isSmartCemAlumisoftRomaneioDocument
+          ? parseSmartCemAlumisoftRomaneioLine(line)
           : isBarListDocument
             ? parseBarListLine(line)
             : isBarCalculationDocument
@@ -3834,10 +3898,11 @@ export async function performOCR(fileBase64: string, mimeType: string, fileName:
         _aiRecheckText = extractedText;
 
         const isQuoteDeliveryDocument = isQuoteDeliveryDocumentText(extractedText);
-        const isMaterialsRelationDocument = isMaterialsRelationDocumentText(extractedText);
+        const isSmartCemAlumisoftRomaneioDoc = isSmartCemAlumisoftRomaneioDocumentText(extractedText);
+        const isMaterialsRelationDocument = !isSmartCemAlumisoftRomaneioDoc && isMaterialsRelationDocumentText(extractedText);
         const isSmartCemBarSummaryDocument = isSmartCemBarSummaryDocumentText(extractedText);
         const isAluminorteRelacaoBarrasDocument = isAluminorteRelacaoBarrasDocumentText(extractedText);
-        const isBarListDocument = !isAluminorteRelacaoBarrasDocument && (isBarListDocumentText(extractedText) || isBarListFileName(fileName));
+        const isBarListDocument = !isAluminorteRelacaoBarrasDocument && !isSmartCemAlumisoftRomaneioDoc && (isBarListDocumentText(extractedText) || isBarListFileName(fileName));
         const isBarCalculationDocument = isBarCalculationDocumentText(extractedText);
         const isSujvidrosCotacaoBarrasDocument = isSujvidrosCotacaoBarrasDocumentText(extractedText);
         const isAcecampPurchaseOrderDoc = isAcecampPurchaseOrderDocumentText(extractedText);
@@ -3852,6 +3917,8 @@ export async function performOCR(fileBase64: string, mimeType: string, fileName:
               ? "QUOTE_DELIVERY_TABLE"
               : isMaterialsRelationDocument
                 ? "MATERIALS_RELATION_TABLE"
+                : isSmartCemAlumisoftRomaneioDoc
+                  ? "SMARTCEM_ALUMISOFT_ROMANEIO"
                 : isBarListDocument
                   ? "BAR_LIST"
                   : isBarCalculationDocument
@@ -4053,6 +4120,24 @@ export async function performOCR(fileBase64: string, mimeType: string, fileName:
             }
             log(`Perfil ECG_PRODUCT_RELATION no PDF digital retornou vazio no prompt ${i + 1}.`);
           }
+        } else if (isSmartCemAlumisoftRomaneioDoc && strictCodes.length > 0) {
+          log(`SmartCEM-Alumisoft Romaneio de Perfis lido pelo parser local (${strictCodes.length} itens). Pulando IA.`);
+          response = { items: [] };
+        } else if (isSmartCemAlumisoftRomaneioDoc) {
+          log("Layout SmartCEM-Alumisoft Romaneio de Perfis detectado no PDF digital. Usando perfil SMARTCEM_ALUMISOFT_ROMANEIO.");
+          const promptChain = getProfilePromptChain("SMARTCEM_ALUMISOFT_ROMANEIO", dynamicBlacklist);
+          response = { items: [] };
+
+          for (let i = 0; i < promptChain.length; i++) {
+            const prompt = `${promptChain[i]}\n\nTexto extraido do PDF:\n\n${extractedText}`;
+            const attempt = await callAIResilient({ fileBase64: "", mimeType: "text/plain", prompt, textOnly: true });
+            if ((attempt.items || []).length > 0) {
+              response = attempt;
+              log(`Perfil SMARTCEM_ALUMISOFT_ROMANEIO no PDF digital retornou ${attempt.items.length} itens.`);
+              break;
+            }
+            log(`Perfil SMARTCEM_ALUMISOFT_ROMANEIO no PDF digital retornou vazio no prompt ${i + 1}.`);
+          }
         } else if (isCemOneRomaneioDoc && strictCodes.length > 0) {
           log(`CEM ONE Romaneio de Perfis lido pelo parser local (${strictCodes.length} itens). Pulando IA.`);
           response = { items: [] };
@@ -4232,7 +4317,8 @@ export async function performOCRFromText(text: string, quantityColumnIndex?: num
     const basePrompt = SYSTEM_PROMPT + dynamicBlacklist;
 
     const isQuoteDeliveryDocument = isQuoteDeliveryDocumentText(text);
-    const isMaterialsRelationDocument = isMaterialsRelationDocumentText(text);
+    const isSmartCemAlumisoftRomaneioTextDocument = isSmartCemAlumisoftRomaneioDocumentText(text);
+    const isMaterialsRelationDocument = !isSmartCemAlumisoftRomaneioTextDocument && isMaterialsRelationDocumentText(text);
     const isSmartCemBarSummaryDocument = isSmartCemBarSummaryDocumentText(text);
     const isAluminorteBarrasTextDocument = isAluminorteRelacaoBarrasDocumentText(text);
     const isBarCalculationDocument = isBarCalculationDocumentText(text);
@@ -4258,6 +4344,8 @@ export async function performOCRFromText(text: string, quantityColumnIndex?: num
                   ? "NEOCA_SIMULACAO_COMPRAS"
                 : isEcgProductRelationTextDocument
                   ? "ECG_PRODUCT_RELATION"
+                : isSmartCemAlumisoftRomaneioTextDocument
+                  ? "SMARTCEM_ALUMISOFT_ROMANEIO"
                 : isCemOneRomaneioTextDocument
                   ? "CEMONE_ROMANEIO_PERFIS"
                 : isQuantityFirstList
@@ -4274,7 +4362,7 @@ export async function performOCRFromText(text: string, quantityColumnIndex?: num
       substitutionItems.length === nonEmptyLineCount;
 
     let response: OCRResponse;
-    if ((isQuoteDeliveryDocument || isMaterialsRelationDocument || isSmartCemBarSummaryDocument || isAluminorteBarrasTextDocument || isBarCalculationDocument || isSujvidrosCotacaoBarrasDocument || isAcecampPurchaseOrderTextDocument || isNeocaSimulacaoComprasTextDocument || isEcgProductRelationTextDocument || isCemOneRomaneioTextDocument) && strictCodes.length > 0) {
+    if ((isQuoteDeliveryDocument || isMaterialsRelationDocument || isSmartCemBarSummaryDocument || isAluminorteBarrasTextDocument || isBarCalculationDocument || isSujvidrosCotacaoBarrasDocument || isAcecampPurchaseOrderTextDocument || isNeocaSimulacaoComprasTextDocument || isEcgProductRelationTextDocument || isSmartCemAlumisoftRomaneioTextDocument || isCemOneRomaneioTextDocument) && strictCodes.length > 0) {
       response = { items: mergeStrictCodes([], strictCodes) };
       response.items = mergeSubstitutionTextItems(response.items, substitutionItems);
     } else if (canResolveFromSubstitutionsOnly) {
@@ -4296,6 +4384,8 @@ export async function performOCRFromText(text: string, quantityColumnIndex?: num
                     ? getProfilePromptChain("NEOCA_SIMULACAO_COMPRAS", dynamicBlacklist)[0]
                   : isEcgProductRelationTextDocument
                     ? getProfilePromptChain("ECG_PRODUCT_RELATION", dynamicBlacklist)[0]
+                  : isSmartCemAlumisoftRomaneioTextDocument
+                    ? getProfilePromptChain("SMARTCEM_ALUMISOFT_ROMANEIO", dynamicBlacklist)[0]
                   : isCemOneRomaneioTextDocument
                     ? getProfilePromptChain("CEMONE_ROMANEIO_PERFIS", dynamicBlacklist)[0]
                   : isQuantityFirstList

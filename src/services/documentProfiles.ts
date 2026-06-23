@@ -39,6 +39,7 @@ export type DocumentProfileKey =
   | "ACECAMP_PURCHASE_ORDER" // Impressa: Pedido de Compra SASTEC (Código interno | REFERENCIA | Descrição | QTDE | Custo | KG BR | KG Total | Vlr Total)
   | "NEOCA_SIMULACAO_COMPRAS" // Impressa: NEOCA "Relatório de Itens da Simulação de Compras" (Código | Descrição | Cor | UN | Qtde.Comprar)
   | "ECG_PRODUCT_RELATION" // Impressa: ECG Glass "Relação dos Produtos" (Código | Descrição | Qtd(barras), sem comprimento/cor)
+  | "SMARTCEM_ALUMISOFT_ROMANEIO" // Impressa: SmartCEM-Alumisoft Romaneio de Perfis (Perfil | Tratamento/Cor | Qtde | Un. | Medida | Peso)
   | "CEMONE_ROMANEIO_PERFIS" // Impressa: "Romaneio de Perfis" do CEM ONE - Alumisoft Sistemas (Perfil | Trat./Cor | Qtde (N BR) | Medida | Peso | Total)
   | "GENERIC";            // Fallback genérico
 
@@ -94,6 +95,7 @@ Tipos disponíveis (escolha EXATAMENTE um):
 - "ACECAMP_PURCHASE_ORDER" → "Pedido de Compra" do sistema SASTEC (www.sastec.com.br). Título contém "PEDIDO DE COMPRA - XXXX - ENTREGA:". Colunas: CÓDIGO (interno, ex: 90-016-NAT) | REFERENCIA (produto real, ex: LG-016) | DESCRIÇÃO | QTDE | CUSTO | KG BR | KG TOTAL | VLR. TOTAL. O produto a importar é a coluna REFERENCIA, não CÓDIGO. Comprimento sempre 6000. Acabamento derivado do sufixo do CÓDIGO (NAT→NT, EBCO→EBCO).
 - "NEOCA_SIMULACAO_COMPRAS" → "RELATÓRIO DE ITENS DA SIMULAÇÃO DE COMPRAS" da NEOCA VIDRAÇARIA. Cabeçalho contém "SIMULAÇÃO DE COMPRAS" e "SIMULAÇÃO NRO.". Colunas: Código | Descrição | Cor | UN | Qtde.Comprar. O produto é a coluna Código (ex: MP347, SU001, VZ051, 25-548). A quantidade está em "Qtde.Comprar" no formato "N,000" (decimal de 3 casas representando inteiro: "2,000"=2, "18,000"=18). Cor (PRETO/BRANCO/NATURAL) é o acabamento; UN (BR) é ignorado. Comprimento sempre 6000.
 - "ECG_PRODUCT_RELATION" → "RELAÇÃO DOS PRODUTOS" do sistema ECG Glass (ecgsistemas.com), ex: ATACADÃO DOS BOX. Cabeçalho "RELAÇÃO DOS PRODUTOS" + seção "PERFIL". Colunas: Código | Descrição | Qtd (barras). SEM coluna de comprimento e SEM coluna de cor/tratamento. O produto é a coluna Código (ex: 25540, BG057, SU001, TB38X76, LB-061). A quantidade é a ÚLTIMA coluna "Qtd (barras)" (último número inteiro da linha). Comprimento sempre 6000; acabamento "NT".
+- "SMARTCEM_ALUMISOFT_ROMANEIO" -> "Romaneio de Perfis" do SmartCEM - Alumisoft Sistemas. Colunas: Perfil | Tratamento / Cor | Qtde | Un. | Medida | Peso (kg). O produto e a coluna Perfil, o beneficiamento e Tratamento / Cor, a quantidade e Qtde, e o comprimento e Medida. A coluna Un. (kg) e o Peso (kg) devem ser ignorados.
 - "CEMONE_ROMANEIO_PERFIS" → "Romaneio de Perfis" do sistema CEM ONE - Alumisoft Sistemas (rodapé "CEM ONE - Alumisoft Sistemas"). Colunas: Perfil | Tratamento/Cor | Qtde. | Medida | % IPI | Peso (kg) | $ Total. A quantidade aparece como "N BR" (ex: "2 BR", "11 BR", "59 BR"). O comprimento = coluna Medida (6000 mm ou 3000 mm). Acabamento: NATURAL→NT, ANODIZADO FOSCO→FOS, PINTURA CINZA NEGRO/RAL7021→EPPF.
 
 Dificuldade:
@@ -915,6 +917,46 @@ EXEMPLOS CORRETOS:
 Retorne somente JSON com a chave 'items'. Não retorne items vazio se houver linhas legíveis.
 `;
 
+export const SMARTCEM_ALUMISOFT_ROMANEIO_PROMPT = `
+Voce esta lendo um "Romaneio de Perfis" do sistema SmartCEM - Alumisoft Sistemas.
+
+ESTRUTURA DO DOCUMENTO:
+Colunas: Perfil | Tratamento / Cor | Qtde | Un. | Medida | Peso (kg)
+
+REGRA CRITICA - QUAL COLUNA E CADA CAMPO:
+- O PRODUTO e a coluna "Perfil" (primeira coluna). Exemplos: A-096, BAR-027, BG057, D-069, DP-014, LG018, TUB-4501, U-877.
+- O BENEFICIAMENTO/COR e a coluna "Tratamento / Cor". Use essa coluna para acabamento.
+- A QUANTIDADE e exclusivamente a coluna "Qtde", um numero inteiro antes da coluna "Un.".
+- A coluna "Un." normalmente contem "kg" e deve ser IGNORADA. Nunca use "kg" como unidade de barra.
+- O COMPRIMENTO e a coluna "Medida" (ex: 6000, 5000).
+- O Peso (kg) e decimal (ex: 100,440, 2.505,282) e deve ser ignorado completamente.
+
+MAPEAMENTO DE ACABAMENTO:
+- "PINTURA PRETO FOSCO", PRETO ou RAL9005 -> "EPPF"
+- BRANCO, RAL9003 ou RAL9010 -> "EBCO"
+- NATURAL, BRUTO ou tratamento vazio -> "NT"
+
+IGNORE: cabecalho do cliente, "Pedido de Compra", "Romaneio", rodape "SmartCEM - Alumisoft Sistemas", paginacao "1 / 4", totais e a linha de cabecalho das colunas.
+
+EXEMPLOS CORRETOS:
+"A-096 PINTURA PRETO FOSCO - RAL9005F 9 kg 6000 100,440"
+-> { produto:"A-096", acabamento:"EPPF", qtde:9, comprimento:6000 }
+
+"BAR-027 PINTURA PRETO FOSCO - RAL9005F 4 kg 6000 10,464"
+-> { produto:"BAR-027", acabamento:"EPPF", qtde:4, comprimento:6000 }
+
+"BG057 PINTURA PRETO FOSCO - RAL9005F 90 kg 6000 91,800"
+-> { produto:"BG057", acabamento:"EPPF", qtde:90, comprimento:6000 }
+
+"DP-033 18 kg 6000 561,060"
+-> { produto:"DP-033", acabamento:"NT", qtde:18, comprimento:6000 }
+
+"LG018 PINTURA PRETO FOSCO - RAL9005F 26 kg 5000 204,360"
+-> { produto:"LG018", acabamento:"EPPF", qtde:26, comprimento:5000 }
+
+Retorne somente JSON com a chave 'items'. Nao retorne items vazio se houver linhas legiveis.
+`;
+
 export const CEMONE_ROMANEIO_PERFIS_PROMPT = `
 Você está lendo um "Romaneio de Perfis" do sistema CEM ONE - Alumisoft Sistemas (rodapé "CEM ONE - Alumisoft Sistemas").
 
@@ -1153,6 +1195,11 @@ export const READING_PROFILES: Record<DocumentProfileKey, ReadingProfile> = {
     label: "Relação dos Produtos ECG Glass (Código=produto, Qtd=última coluna)",
     promptChain: [ECG_PRODUCT_RELATION_PROMPT, GENERIC_FALLBACK_PROMPT],
   },
+  SMARTCEM_ALUMISOFT_ROMANEIO: {
+    key: "SMARTCEM_ALUMISOFT_ROMANEIO",
+    label: "SmartCEM-Alumisoft Romaneio de Perfis (Perfil/Tratamento-Cor/Qtde/Medida)",
+    promptChain: [SMARTCEM_ALUMISOFT_ROMANEIO_PROMPT, GENERIC_FALLBACK_PROMPT],
+  },
   CEMONE_ROMANEIO_PERFIS: {
     key: "CEMONE_ROMANEIO_PERFIS",
     label: "CEM ONE – Romaneio de Perfis (Perfil | Trat./Cor | Qtde N BR | Medida)",
@@ -1191,7 +1238,7 @@ export function getProfilePromptChain(
 export function parseClassificationResult(raw: string): ClassificationResult {
   const validKeys = new Set<DocumentProfileKey>([
     "HANDWRITTEN_COLON", "HANDWRITTEN_DASH", "HANDWRITTEN_EQUALS",
-    "BUDGET_TABLE", "METAPERFIL_PAINTING_TABLE", "PRODUCT_VARIANT_TABLE", "DESCRIPTION_CODE_TABLE", "PROFILE_TABLE", "MATERIALS_RELATION_TABLE", "SMARTCEM_BAR_SUMMARY", "BAR_LIST", "CUT_ORIENTATION_TABLE", "QUOTE_DELIVERY_TABLE", "COTACAO_OBRA_TABLE", "EXPORTED_PROFILE_CSV", "DFC_QUOTE_SHEET", "SIMPLE_LIST", "QUANTITY_FIRST_LIST", "COLOR_MATRIX_TABLE", "BAR_CALCULATION", "SUJVIDROS_COTACAO_BARRAS", "ALUMINORTE_RELACAO_BARRAS", "ACECAMP_PURCHASE_ORDER", "NEOCA_SIMULACAO_COMPRAS", "ECG_PRODUCT_RELATION", "CEMONE_ROMANEIO_PERFIS", "GENERIC",
+    "BUDGET_TABLE", "METAPERFIL_PAINTING_TABLE", "PRODUCT_VARIANT_TABLE", "DESCRIPTION_CODE_TABLE", "PROFILE_TABLE", "MATERIALS_RELATION_TABLE", "SMARTCEM_BAR_SUMMARY", "BAR_LIST", "CUT_ORIENTATION_TABLE", "QUOTE_DELIVERY_TABLE", "COTACAO_OBRA_TABLE", "EXPORTED_PROFILE_CSV", "DFC_QUOTE_SHEET", "SIMPLE_LIST", "QUANTITY_FIRST_LIST", "COLOR_MATRIX_TABLE", "BAR_CALCULATION", "SUJVIDROS_COTACAO_BARRAS", "ALUMINORTE_RELACAO_BARRAS", "ACECAMP_PURCHASE_ORDER", "NEOCA_SIMULACAO_COMPRAS", "ECG_PRODUCT_RELATION", "SMARTCEM_ALUMISOFT_ROMANEIO", "CEMONE_ROMANEIO_PERFIS", "GENERIC",
   ]);
 
   try {
