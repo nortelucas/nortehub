@@ -14,7 +14,6 @@ import {
   Box, Star, Wrench, Shield, Users, AlertCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { HubLinkData } from "./Config";
 
@@ -36,7 +35,7 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
   let iconContainerClass = "w-10 h-10 rounded-xl";
   let iconClass = "w-5 h-5";
   let titleClass = "text-lg md:text-xl";
-  let descClass = "text-slate-350 text-xs md:text-sm";
+  let descClass = "text-slate-400 text-xs md:text-sm";
   let btnClass = "h-10 text-sm";
   let badgeClass = "text-[10px] px-2 py-0.5";
   let gapClass = "gap-5 lg:gap-6";
@@ -59,25 +58,26 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
     iconContainerClass = "w-9 h-9 rounded-lg";
     iconClass = "w-4 h-4";
     titleClass = "text-base md:text-lg";
-    descClass = "text-slate-350 text-xs";
+    descClass = "text-slate-400 text-xs";
     btnClass = "h-9 text-xs";
     badgeClass = "text-[9px] px-1.5 py-0";
     gapClass = "gap-4 lg:gap-5";
   } else if (count <= 6) {
-    gridColsClass = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6";
-    maxContainerWidth = "max-w-7xl";
-    cardPaddingClass = "p-4 pb-2";
-    contentPaddingClass = "p-4 pt-0 flex-1";
-    footerPaddingClass = "p-4 pt-2.5";
-    iconContainerClass = "w-9 h-9 rounded-lg";
-    iconClass = "w-4 h-4";
-    titleClass = "text-base md:text-lg";
-    descClass = "text-slate-350 text-xs";
-    btnClass = "h-9 text-xs";
-    badgeClass = "text-[9px] px-1.5 py-0";
-    gapClass = "gap-4";
+    // 5 or 6 links: display 3 columns per row for a spacious, balanced layout
+    gridColsClass = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+    maxContainerWidth = "max-w-5xl";
+    cardPaddingClass = "p-5 md:p-6 pb-3";
+    contentPaddingClass = "p-5 md:p-6 pt-0 flex-1";
+    footerPaddingClass = "p-5 md:p-6 pt-3";
+    iconContainerClass = "w-10 h-10 rounded-xl";
+    iconClass = "w-5 h-5";
+    titleClass = "text-lg md:text-xl";
+    descClass = "text-slate-400 text-xs md:text-sm";
+    btnClass = "h-10 text-sm";
+    badgeClass = "text-[10px] px-2 py-0.5";
+    gapClass = "gap-5 lg:gap-6";
   } else {
-    // 7 or more links (super compact layout to avoid scrolling as much as possible)
+    // 7 or more links (compact layout to prevent excessive scrolling)
     gridColsClass = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5";
     maxContainerWidth = "max-w-7xl";
     cardPaddingClass = "p-3.5 md:p-4 pb-1.5";
@@ -86,7 +86,7 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
     iconContainerClass = "w-8 h-8 rounded-md";
     iconClass = "w-4 h-4";
     titleClass = "text-sm md:text-base";
-    descClass = "text-slate-350 text-[11px] leading-snug";
+    descClass = "text-slate-400 text-[11px] leading-snug";
     btnClass = "h-8 text-xs";
     badgeClass = "text-[8px] px-1 py-0";
     gapClass = "gap-3";
@@ -200,10 +200,10 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
             
             return (
               <motion.div key={link.id} variants={itemVariants} className="h-full">
-                <Card className={`group h-full bg-slate-900/40 backdrop-blur-md border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between relative transition-all duration-300 ${isLocked ? 'opacity-60' : `${colors.border} ${colors.shadow}`}`}>
+                <div className={`group h-full bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between relative transition-all duration-300 ${isLocked ? 'opacity-60' : `${colors.border} ${colors.shadow}`}`}>
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors.from} ${colors.to} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                   
-                  <CardHeader className={cardPaddingClass}>
+                  <div className={cardPaddingClass}>
                     <div className="flex items-center justify-between mb-4">
                       <div className={`${iconContainerClass} ${colors.bgOpacity} ${colors.text} flex items-center justify-center transition-all duration-300 shadow-inner ${!isLocked ? `group-hover:scale-105 ${colors.hoverIconBg} group-hover:text-white` : 'border border-slate-800'}`}>
                         {renderIcon(link.iconName, iconClass)}
@@ -215,18 +215,18 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
                       )}
                     </div>
                     
-                    <CardTitle className={`${titleClass} font-bold text-white mb-1 transition-colors ${!isLocked && `group-hover:${colors.text}`}`}>
+                    <h3 className={`${titleClass} font-bold text-white mb-1 transition-colors ${!isLocked && `group-hover:${colors.text}`}`}>
                       {link.title}
-                    </CardTitle>
-                  </CardHeader>
+                    </h3>
+                  </div>
                   
-                  <CardContent className={contentPaddingClass}>
+                  <div className={contentPaddingClass}>
                     <p className={`${descClass} leading-relaxed whitespace-pre-wrap`}>
                       {link.description}
                     </p>
-                  </CardContent>
+                  </div>
                   
-                  <CardFooter className={`${footerPaddingClass} border-t border-slate-800/30 bg-slate-950/20 flex flex-col gap-2.5`}>
+                  <div className={`${footerPaddingClass} border-t border-slate-800/30 bg-slate-950/20 flex flex-col gap-2.5`}>
                     {isLocked ? (
                       <Button disabled className={`w-full ${colors.btnBg} ${colors.text} border border-slate-800 font-bold ${btnClass} rounded-xl flex items-center justify-center gap-2 cursor-not-allowed`}>
                         <Lock className="w-3.5 h-3.5" />
@@ -259,8 +259,8 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
                         )}
                       </>
                     )}
-                  </CardFooter>
-                </Card>
+                  </div>
+                </div>
               </motion.div>
             );
           })}
