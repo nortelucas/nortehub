@@ -337,8 +337,60 @@ export default function App() {
     return saved ? JSON.parse(saved) : DEFAULT_HUB_LINKS;
   });
 
+  const isFirstMount = useRef(true);
+  const ignoreNextSync = useRef(false);
+
+  // Carrega os links do banco de dados na inicialização
+  useEffect(() => {
+    const fetchLinks = async () => {
+      try {
+        const response = await fetch("/api/hub-links");
+        if (response.ok) {
+          const data = await response.json();
+          if (Array.isArray(data) && data.length > 0) {
+            ignoreNextSync.current = true;
+            setHubLinks(data);
+            localStorage.setItem("aluminorte_hub_links", JSON.stringify(data));
+          }
+        }
+      } catch (error) {
+        console.error("Erro ao carregar links do hub:", error);
+      }
+    };
+    fetchLinks();
+  }, []);
+
+  // Salva no localStorage imediatamente
   useEffect(() => {
     localStorage.setItem("aluminorte_hub_links", JSON.stringify(hubLinks));
+  }, [hubLinks]);
+
+  // Sincroniza com o PostgreSQL de forma debulada (1.5s) para evitar chamadas excessivas
+  useEffect(() => {
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
+    if (ignoreNextSync.current) {
+      ignoreNextSync.current = false;
+      return;
+    }
+
+    const delayDebounceFn = setTimeout(async () => {
+      try {
+        await fetch("/api/hub-links", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ links: hubLinks }),
+        });
+      } catch (err) {
+        console.error("Erro ao sincronizar links com o banco:", err);
+      }
+    }, 1500);
+
+    return () => clearTimeout(delayDebounceFn);
   }, [hubLinks]);
 
   const [prices, setPrices] = useState<Prices>(() => {

@@ -8,6 +8,122 @@ import fs from "fs";
 import multer from "multer";
 import { createClient } from "@supabase/supabase-js";
 import { generateWithGemini, getConfiguredGeminiApiKeys } from "../lib/geminiProxy.js";
+import pg from "pg";
+const { Pool } = pg;
+
+// ── PostgreSQL (Neon DB) ──────────────────────────────────────────────────────
+const pgPool = (() => {
+  try {
+    const connectionString = process.env.DATABASE_URL;
+    if (!connectionString || connectionString === "undefined") {
+      console.warn("[PostgreSQL] DATABASE_URL não configurada.");
+      return null;
+    }
+    return new Pool({
+      connectionString,
+      ssl: connectionString.includes("sslmode=require") || connectionString.includes("ssl=true")
+        ? { rejectUnauthorized: false }
+        : false,
+    });
+  } catch (e) {
+    console.error("[PostgreSQL Init Error]", e);
+    return null;
+  }
+})();
+
+// Inicializa a tabela hub_links
+async function initPostgresDB() {
+  if (!pgPool) return;
+  try {
+    await pgPool.query(`
+      CREATE TABLE IF NOT EXISTS hub_links (
+        id INT PRIMARY KEY,
+        links JSONB NOT NULL,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
+    const res = await pgPool.query("SELECT id, links FROM hub_links WHERE id = 1;");
+    const defaultLinks = [
+      {
+        id: "link-1",
+        iconName: "FileText",
+        title: "OCR de Perfis",
+        subtitle: "Perfis de Alumínio",
+        description: "Extração inteligente de dados e precificação automática de pedidos de perfis de alumínio. Suporta envio de arquivos PDF, imagens e Excel.",
+        url: "ocr-perfis",
+        isExternal: false,
+        isActive: true,
+        themeColor: "primary"
+      },
+      {
+        id: "link-2",
+        iconName: "Lock",
+        title: "OCR de Componentes",
+        subtitle: "Componentes e Acessórios",
+        description: "Leitura automática e precificação inteligente para pedidos de acessórios, conexões e componentes de alumínio de forma integrada.\n\nocracess.vercel.app",
+        url: "#",
+        isExternal: false,
+        isActive: true,
+        themeColor: "slate"
+      },
+      {
+        id: "link-3",
+        iconName: "RefreshCw",
+        title: "Portal de Devoluções",
+        subtitle: "Portal de Devoluções",
+        description: "Sistema para gerenciamento e conferência de devoluções de mercadorias e materiais operacionais. Acesso rápido e integrado.",
+        url: "http://192.168.5.244:3008/",
+        isExternal: true,
+        isActive: true,
+        themeColor: "blue"
+      }
+    ];
+
+    if (res.rowCount === 0) {
+      await pgPool.query("INSERT INTO hub_links (id, links) VALUES (1, $1::jsonb);", [JSON.stringify(defaultLinks)]);
+      console.log("[PostgreSQL] Tabela hub_links inicializada com links padrões.");
+    } else if (res.rows[0] && Array.isArray(res.rows[0].links) && res.rows[0].links.length === 0) {
+      await pgPool.query("UPDATE hub_links SET links = $1::jsonb WHERE id = 1;", [JSON.stringify(defaultLinks)]);
+      console.log("[PostgreSQL] Tabela hub_links atualizada de array vazio para links padrões.");
+    }
+  } catch (e) {
+    console.error("[PostgreSQL Init DB Error]", e);
+  }
+}
+
+initPostgresDB();
+
+async function fetchHubLinksFromDB(): Promise<any[] | null> {
+  if (!pgPool) return null;
+  try {
+    const res = await pgPool.query("SELECT links FROM hub_links WHERE id = 1;");
+    if (res.rowCount && res.rows[0]) {
+      return res.rows[0].links;
+    }
+    return null;
+  } catch (e) {
+    console.error("[PostgreSQL Read Links]", e);
+    return null;
+  }
+}
+
+async function saveHubLinksToDB(links: any[]): Promise<boolean> {
+  if (!pgPool) return false;
+  try {
+    await pgPool.query(
+      `INSERT INTO hub_links (id, links, updated_at) 
+       VALUES (1, $1, CURRENT_TIMESTAMP) 
+       ON CONFLICT (id) 
+       DO UPDATE SET links = EXCLUDED.links, updated_at = CURRENT_TIMESTAMP;`,
+      [JSON.stringify(links)]
+    );
+    return true;
+  } catch (e) {
+    console.error("[PostgreSQL Write Links]", e);
+    return false;
+  }
+}
 
 // ── Supabase ──────────────────────────────────────────────────────────────────
 const supabase = (() => {
@@ -366,6 +482,35 @@ function writeLocalCatalog(data: any): boolean {
     return false;
   }
 }
+
+// Hub Links - GET
+app.get("/api/hub-links", async (_req, res) => {
+  try {
+    const links = await fetchHubLinksFromDB();
+    if (links) {
+      return res.json(links);
+    }
+    return res.json([]);
+  } catch (err: any) {
+    console.error("[/api/hub-links] GET Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Hub Links - POST
+app.post("/api/hub-links", async (req, res) => {
+  try {
+    const { links } = req.body;
+    if (!Array.isArray(links)) {
+      return res.status(400).json({ error: "Dados inválidos: 'links' deve ser uma lista." });
+    }
+    const success = await saveHubLinksToDB(links);
+    res.json({ success });
+  } catch (err: any) {
+    console.error("[/api/hub-links] POST Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // Catalog - GET
 app.get("/api/catalog", async (_req, res) => {
