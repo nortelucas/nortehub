@@ -24,6 +24,74 @@ interface HubProps {
 }
 
 export function Hub({ navigateTo, hubLinks }: HubProps) {
+  const activeLinks = hubLinks.filter(link => link.isActive);
+  const count = activeLinks.length;
+
+  // Dynamically calculate grid columns, gaps, paddings and text sizes depending on the link count
+  let gridColsClass = "grid-cols-1 md:grid-cols-3";
+  let maxContainerWidth = "max-w-5xl";
+  let cardPaddingClass = "p-5 md:p-6 pb-3";
+  let contentPaddingClass = "p-5 md:p-6 pt-0 flex-1";
+  let footerPaddingClass = "p-5 md:p-6 pt-3";
+  let iconContainerClass = "w-10 h-10 rounded-xl";
+  let iconClass = "w-5 h-5";
+  let titleClass = "text-lg md:text-xl";
+  let descClass = "text-slate-350 text-xs md:text-sm";
+  let btnClass = "h-10 text-sm";
+  let badgeClass = "text-[10px] px-2 py-0.5";
+  let gapClass = "gap-5 lg:gap-6";
+
+  if (count === 1) {
+    gridColsClass = "grid-cols-1";
+    maxContainerWidth = "max-w-md";
+  } else if (count === 2) {
+    gridColsClass = "grid-cols-1 sm:grid-cols-2";
+    maxContainerWidth = "max-w-3xl";
+  } else if (count === 3) {
+    gridColsClass = "grid-cols-1 md:grid-cols-3";
+    maxContainerWidth = "max-w-5xl";
+  } else if (count === 4) {
+    gridColsClass = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+    maxContainerWidth = "max-w-6xl";
+    cardPaddingClass = "p-4 md:p-5 pb-2";
+    contentPaddingClass = "p-4 md:p-5 pt-0 flex-1";
+    footerPaddingClass = "p-4 md:p-5 pt-2.5";
+    iconContainerClass = "w-9 h-9 rounded-lg";
+    iconClass = "w-4 h-4";
+    titleClass = "text-base md:text-lg";
+    descClass = "text-slate-350 text-xs";
+    btnClass = "h-9 text-xs";
+    badgeClass = "text-[9px] px-1.5 py-0";
+    gapClass = "gap-4 lg:gap-5";
+  } else if (count <= 6) {
+    gridColsClass = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6";
+    maxContainerWidth = "max-w-7xl";
+    cardPaddingClass = "p-4 pb-2";
+    contentPaddingClass = "p-4 pt-0 flex-1";
+    footerPaddingClass = "p-4 pt-2.5";
+    iconContainerClass = "w-9 h-9 rounded-lg";
+    iconClass = "w-4 h-4";
+    titleClass = "text-base md:text-lg";
+    descClass = "text-slate-350 text-xs";
+    btnClass = "h-9 text-xs";
+    badgeClass = "text-[9px] px-1.5 py-0";
+    gapClass = "gap-4";
+  } else {
+    // 7 or more links (super compact layout to avoid scrolling as much as possible)
+    gridColsClass = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5";
+    maxContainerWidth = "max-w-7xl";
+    cardPaddingClass = "p-3.5 md:p-4 pb-1.5";
+    contentPaddingClass = "p-3.5 md:p-4 pt-0 flex-1";
+    footerPaddingClass = "p-3.5 md:p-4 pt-2";
+    iconContainerClass = "w-8 h-8 rounded-md";
+    iconClass = "w-4 h-4";
+    titleClass = "text-sm md:text-base";
+    descClass = "text-slate-350 text-[11px] leading-snug";
+    btnClass = "h-8 text-xs";
+    badgeClass = "text-[8px] px-1 py-0";
+    gapClass = "gap-3";
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -68,7 +136,7 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'primary': return { text: 'text-primary', bgOpacity: 'bg-primary/10', from: 'from-primary', to: 'to-orange-500', shadow: 'hover:shadow-[0_0_30px_rgba(244,121,32,0.15)]', border: 'hover:border-primary/50', btnBg: 'bg-primary', btnHover: 'hover:bg-primary/95', btnShadow: 'shadow-primary/20', hoverIconBg: 'group-hover:bg-primary', badgeBg: 'bg-emerald-500/10', badgeText: 'text-emerald-400', badgeBorder: 'border-emerald-500/20' };
-      case 'blue': return { text: 'text-blue-400', bgOpacity: 'bg-blue-500/10', from: 'from-blue-500', to: 'to-indigo-600', shadow: 'hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]', border: 'hover:border-blue-500/50', btnBg: 'bg-blue-600', btnHover: 'hover:bg-blue-500', btnShadow: 'shadow-blue-600/20', hoverIconBg: 'group-hover:bg-blue-500', badgeBg: 'bg-blue-500/10', badgeText: 'text-blue-400', badgeBorder: 'border-blue-500/20' };
+      case 'blue': return { text: 'text-blue-400', bgOpacity: 'bg-blue-50/5', from: 'from-blue-500', to: 'to-indigo-600', shadow: 'hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]', border: 'hover:border-blue-500/50', btnBg: 'bg-blue-600', btnHover: 'hover:bg-blue-500', btnShadow: 'shadow-blue-600/20', hoverIconBg: 'group-hover:bg-blue-500', badgeBg: 'bg-blue-500/10', badgeText: 'text-blue-400', badgeBorder: 'border-blue-500/20' };
       case 'green': return { text: 'text-emerald-400', bgOpacity: 'bg-emerald-500/10', from: 'from-emerald-500', to: 'to-green-600', shadow: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]', border: 'hover:border-emerald-500/50', btnBg: 'bg-emerald-600', btnHover: 'hover:bg-emerald-500', btnShadow: 'shadow-emerald-600/20', hoverIconBg: 'group-hover:bg-emerald-500', badgeBg: 'bg-emerald-500/10', badgeText: 'text-emerald-400', badgeBorder: 'border-emerald-500/20' };
       case 'slate': return { text: 'text-slate-400', bgOpacity: 'bg-slate-800', from: 'from-slate-600', to: 'to-slate-700', shadow: '', border: 'hover:border-slate-700/50', btnBg: 'bg-slate-800', btnHover: 'hover:bg-slate-700', btnShadow: 'shadow-slate-900/20', hoverIconBg: 'group-hover:bg-slate-700', badgeBg: 'bg-slate-800', badgeText: 'text-slate-400', badgeBorder: 'border-slate-700' };
       case 'purple': return { text: 'text-purple-400', bgOpacity: 'bg-purple-500/10', from: 'from-purple-500', to: 'to-fuchsia-600', shadow: 'hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]', border: 'hover:border-purple-500/50', btnBg: 'bg-purple-600', btnHover: 'hover:bg-purple-500', btnShadow: 'shadow-purple-600/20', hoverIconBg: 'group-hover:bg-purple-500', badgeBg: 'bg-purple-500/10', badgeText: 'text-purple-400', badgeBorder: 'border-purple-500/20' };
@@ -124,9 +192,9 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 items-stretch max-w-5xl mx-auto w-full"
+          className={`grid ${gridColsClass} ${gapClass} items-stretch ${maxContainerWidth} mx-auto w-full`}
         >
-          {hubLinks.filter(link => link.isActive).map(link => {
+          {activeLinks.map(link => {
             const colors = getColorClasses(link.themeColor);
             const isLocked = link.url === "#";
             
@@ -135,32 +203,32 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
                 <Card className={`group h-full bg-slate-900/40 backdrop-blur-md border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between relative transition-all duration-300 ${isLocked ? 'opacity-60' : `${colors.border} ${colors.shadow}`}`}>
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors.from} ${colors.to} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                   
-                  <CardHeader className="p-5 md:p-6 pb-3">
+                  <CardHeader className={cardPaddingClass}>
                     <div className="flex items-center justify-between mb-4">
-                      <div className={`w-10 h-10 rounded-xl ${colors.bgOpacity} ${colors.text} flex items-center justify-center transition-all duration-300 shadow-inner ${!isLocked ? `group-hover:scale-105 ${colors.hoverIconBg} group-hover:text-white` : 'border border-slate-800'}`}>
-                        {renderIcon(link.iconName, "w-5 h-5")}
+                      <div className={`${iconContainerClass} ${colors.bgOpacity} ${colors.text} flex items-center justify-center transition-all duration-300 shadow-inner ${!isLocked ? `group-hover:scale-105 ${colors.hoverIconBg} group-hover:text-white` : 'border border-slate-800'}`}>
+                        {renderIcon(link.iconName, iconClass)}
                       </div>
                       {link.subtitle && (
-                        <Badge className={`${colors.badgeBg} ${colors.badgeText} border ${colors.badgeBorder} font-semibold px-2 py-0.5 rounded-full text-[10px]`}>
+                        <Badge className={`${colors.badgeBg} ${colors.badgeText} border ${colors.badgeBorder} font-semibold rounded-full ${badgeClass}`}>
                           {link.subtitle}
                         </Badge>
                       )}
                     </div>
                     
-                    <CardTitle className={`text-lg md:text-xl font-bold text-white mb-1 transition-colors ${!isLocked && `group-hover:${colors.text}`}`}>
+                    <CardTitle className={`${titleClass} font-bold text-white mb-1 transition-colors ${!isLocked && `group-hover:${colors.text}`}`}>
                       {link.title}
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="p-5 md:p-6 pt-0 flex-1">
-                    <p className="text-slate-300 text-xs md:text-sm leading-relaxed whitespace-pre-wrap">
+                  <CardContent className={contentPaddingClass}>
+                    <p className={`${descClass} leading-relaxed whitespace-pre-wrap`}>
                       {link.description}
                     </p>
                   </CardContent>
                   
-                  <CardFooter className="p-5 md:p-6 pt-3 border-t border-slate-800/30 bg-slate-950/20 flex flex-col gap-2.5">
+                  <CardFooter className={`${footerPaddingClass} border-t border-slate-800/30 bg-slate-950/20 flex flex-col gap-2.5`}>
                     {isLocked ? (
-                      <Button disabled className={`w-full ${colors.btnBg} ${colors.text} border border-slate-800 font-bold h-10 rounded-xl flex items-center justify-center gap-2 cursor-not-allowed text-sm`}>
+                      <Button disabled className={`w-full ${colors.btnBg} ${colors.text} border border-slate-800 font-bold ${btnClass} rounded-xl flex items-center justify-center gap-2 cursor-not-allowed`}>
                         <Lock className="w-3.5 h-3.5" />
                         Em breve
                       </Button>
@@ -168,14 +236,14 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
                       <>
                         {link.isExternal ? (
                           <a href={link.url} target="_blank" rel="noopener noreferrer" className="w-full">
-                            <Button className={`w-full ${colors.btnBg} ${colors.btnHover} text-white font-bold h-10 rounded-xl shadow-lg ${colors.btnShadow} transition-all flex items-center justify-center gap-2 cursor-pointer text-sm`}>
+                            <Button className={`w-full ${colors.btnBg} ${colors.btnHover} text-white font-bold ${btnClass} rounded-xl shadow-lg ${colors.btnShadow} transition-all flex items-center justify-center gap-2 cursor-pointer`}>
                               Acessar Portal
                               <ExternalLink className="w-4 h-4" />
                             </Button>
                           </a>
                         ) : link.url.startsWith('http') ? (
                           <a href={link.url} target="_self" className="w-full">
-                            <Button className={`w-full ${colors.btnBg} ${colors.btnHover} text-white font-bold h-10 rounded-xl shadow-lg ${colors.btnShadow} transition-all flex items-center justify-center gap-2 cursor-pointer text-sm`}>
+                            <Button className={`w-full ${colors.btnBg} ${colors.btnHover} text-white font-bold ${btnClass} rounded-xl shadow-lg ${colors.btnShadow} transition-all flex items-center justify-center gap-2 cursor-pointer`}>
                               Abrir Ferramenta
                               <ArrowRight className="w-4 h-4" />
                             </Button>
@@ -183,7 +251,7 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
                         ) : (
                           <Button 
                             onClick={() => navigateTo(link.url as any)}
-                            className={`w-full ${colors.btnBg} ${colors.btnHover} text-white font-bold h-10 rounded-xl shadow-lg ${colors.btnShadow} transition-all flex items-center justify-center gap-2 cursor-pointer text-sm`}
+                            className={`w-full ${colors.btnBg} ${colors.btnHover} text-white font-bold ${btnClass} rounded-xl shadow-lg ${colors.btnShadow} transition-all flex items-center justify-center gap-2 cursor-pointer`}
                           >
                             Abrir Ferramenta
                             <ArrowRight className="w-4 h-4" />
