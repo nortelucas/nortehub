@@ -176,7 +176,7 @@ export function Hub({ navigateTo, hubLinks }: HubProps) {
           
           <div className="flex justify-center mb-2">
             <img
-              src="/logo.png"
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Aluminorte Logo"
               className="h-10 md:h-12 object-contain drop-shadow-[0_0_15px_rgba(244,121,32,0.15)]"
             />

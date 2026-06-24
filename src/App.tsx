@@ -249,37 +249,49 @@ function BrowserCompatibilityNotice() {
   );
 }
 
+type AppView = 'hub' | 'ocr-perfis' | 'admin' | 'help' | 'users' | 'substitutions' | 'config';
+
+const INTERNAL_ROUTES: AppView[] = ['ocr-perfis', 'admin', 'help', 'users', 'substitutions', 'config'];
+
+function resolveBasePath(pathname: string) {
+  const matchedRoute = INTERNAL_ROUTES.find(route => pathname.endsWith(`/${route}`));
+  if (matchedRoute) {
+    const base = pathname.slice(0, pathname.length - matchedRoute.length);
+    return base === '' ? '/' : base.replace(/\/+$/, '');
+  }
+  return pathname.replace(/\/+$/, '') || '/';
+}
+
+function resolveView(pathname: string, basePath: string): AppView {
+  let relativePath = pathname;
+  if (basePath !== '/' && pathname.startsWith(basePath)) {
+    relativePath = pathname.slice(basePath.length) || '/';
+  }
+  if (relativePath === '/ocr-perfis') return 'ocr-perfis';
+  if (relativePath === '/admin') return 'admin';
+  if (relativePath === '/help') return 'help';
+  if (relativePath === '/users') return 'users';
+  if (relativePath === '/substitutions') return 'substitutions';
+  if (relativePath === '/config') return 'config';
+  return 'hub';
+}
+
 export default function App() {
-  const [currentView, setCurrentView] = useState<'hub' | 'ocr-perfis' | 'admin' | 'help' | 'users' | 'substitutions' | 'config'>(() => {
-    const path = window.location.pathname;
-    if (path === '/ocr-perfis') return 'ocr-perfis';
-    if (path === '/admin') return 'admin';
-    if (path === '/help') return 'help';
-    if (path === '/users') return 'users';
-    if (path === '/substitutions') return 'substitutions';
-    if (path === '/config') return 'config';
-    return 'hub';
-  });
+  const basePath = resolveBasePath(window.location.pathname);
+
+  const [currentView, setCurrentView] = useState<AppView>(() => resolveView(window.location.pathname, basePath));
 
   useEffect(() => {
     const handlePopState = () => {
-      const path = window.location.pathname;
-      setCurrentView(
-        path === '/ocr-perfis' ? 'ocr-perfis' :
-          path === '/admin' ? 'admin' :
-            path === '/help' ? 'help' :
-              path === '/users' ? 'users' :
-                path === '/substitutions' ? 'substitutions' :
-                  path === '/config' ? 'config' : 'hub'
-      );
+      setCurrentView(resolveView(window.location.pathname, basePath));
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  }, [basePath]);
 
 
-  const navigateTo = (view: 'hub' | 'ocr-perfis' | 'admin' | 'help' | 'users' | 'substitutions' | 'config') => {
-    const path = view === 'hub' ? '/' : `/${view}`;
+  const navigateTo = (view: AppView) => {
+    const path = view === 'hub' ? basePath : `${basePath === '/' ? '' : basePath}/${view}`;
     window.history.pushState({}, '', path);
     setCurrentView(view);
   };
@@ -1473,7 +1485,7 @@ export default function App() {
             <header className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white/80 backdrop-blur p-4 md:p-5 rounded-2xl shadow-sm ring-1 ring-slate-900/5">
               <div className="flex items-center gap-3 md:gap-4">
                 <img
-                  src="/logo.png"
+                  src={`${import.meta.env.BASE_URL}logo.png`}
                   alt="Aluminorte Logo"
                   className="h-8 md:h-10 object-contain cursor-pointer"
                   onClick={() => navigateTo('hub')}
